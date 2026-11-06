@@ -1,0 +1,91 @@
+export default {
+  slug: "crest-insurance-group",
+  company: "Crest Insurance Group",
+  market: "us",
+  date: "November 4, 2026",
+  headline: "18 offices, one quote form, and no word on when anyone calls back.",
+  intro:
+    "We read Crest the way a new client would: website, quote forms, public listings and reviews. Everything below links to where we saw it. Three fixes cost nothing and you can make them this week.",
+  summary: [
+    "Your site lists 18 office entries but no opening hours, and nothing about what to do after hours or on weekends.",
+    "The “Get a Consult” form doesn't say when someone will respond.",
+    "Reviews call your team responsive, with one recent complaint about follow-through.",
+  ],
+  channels: [
+    { name: "Phone", status: "ok", detail: "18 office entries with local numbers, plus a shared toll-free line, (888) 881-5765.", url: "https://www.crestins.com/contact/" },
+    { name: "Email", status: "ok", detail: "An email link for each office on the contact page.", url: "https://www.crestins.com/contact/" },
+    { name: "Quote requests", status: "warn", detail: "A home and auto form with “Get a Consult,” and a separate small-business quote tool. Neither says when you'll respond.", url: "https://crestins.com/crest-quote/" },
+    { name: "Existing clients", status: "ok", detail: "A Client Service Portal linked from the homepage. We didn't open it.", url: "https://portal.csr24.com/mvc/8815760" },
+    { name: "Wyoming offices", status: "warn", detail: "Tegeler & Associates brings 14 Wyoming locations; the homepage lists Laramie and Rawlins and doesn't mention Tegeler yet.", url: "https://www.civc.com/news/civc-portfolio-company-crest-insurance-group-announces-acquisition-of-tegeler-associates/" },
+    { name: "Chat, text, claims contact", status: "unknown", detail: "Not seen on the homepage or contact page. A widget that loads separately may not have shown up for us." },
+  ],
+  hours: [
+    { name: "Your website", status: "bad", detail: "No hours, weekend, after-hours or emergency-claims wording on the homepage or contact page.", url: "https://www.crestins.com/" },
+    { name: "Tucson, public listing", status: "ok", detail: "Birdeye: Monday to Friday, 9 a.m.–6 p.m., closed weekends.", url: "https://reviews.birdeye.com/crest-insurance-group-148367795690266" },
+    { name: "Flagstaff, public listing", status: "warn", detail: "Birdeye: Mon–Thu 8 a.m.–5 p.m., Fri 8:30 a.m.–4:30 p.m., closed weekends. The profile is unclaimed.", url: "https://reviews.birdeye.com/crest-insurance-group-155348056113279" },
+    { name: "Quote form", status: "bad", detail: "Doesn't say when someone will get back to the person who filled it in.", url: "https://crestins.com/crest-quote/" },
+  ],
+  reviewsNote: "Birdeye shows 4.0 from 45 Google reviews for Tucson and 4.2 from 31 for Flagstaff. Recent reviews praise responsiveness, with one complaint about follow-through on a single agent.",
+  quotes: [
+    { q: "They have always been great at responding to my questions", who: "Google review on Birdeye, Tucson, about two months ago", url: "https://reviews.birdeye.com/crest-insurance-group-148367795690266", tone: "pos" },
+    { q: "Every member of the Crest team is knowledgeable, professional, responsive, and genuinely committed", who: "Google review on Birdeye, Tucson, about two months ago", url: "https://reviews.birdeye.com/crest-insurance-group-148367795690266", tone: "pos" },
+    { q: "complete lack of follow through", who: "Google review on Birdeye, Tucson, about one agent, about four months ago", url: "https://reviews.birdeye.com/crest-insurance-group-148367795690266", tone: "neg" },
+  ],
+  fixes: [
+    { title: "Add hours to each office entry.", body: "On the homepage and contact page, matched to each Google listing. While you're there, reconcile the list: the contact page sidebar still names Scottsdale and Mesa, which aren't on the homepage." },
+    { title: "Add one line under “Get a Consult.”", body: "Say how and when someone will respond, using whatever is true today. It sets expectations and costs nothing." },
+    { title: "Add a short claims and after-hours box.", body: "Tell clients who to contact for a claim and what to do when the office is closed, including carrier claim numbers where that's the right path." },
+  ],
+  calc: { unit: "$", job: "average first-year commission per new household", leads: "quote requests a week that arrive after hours or on weekends" },
+  convo: {
+    title: "What an evening quote request could look like",
+    note: "Illustrative only, using your home and auto consult. A real version follows your routing and licensing rules, and never quotes or binds coverage.",
+    channel: "Crest Insurance Group",
+    turns: [
+      ["c", "We're closing on a house in Flagstaff next month and want to combine home and auto. Can someone help?"],
+      ["a", "Yes. The Flagstaff office is closed for today, but I can start this so you won't have to repeat yourself. When is your closing date?"],
+      ["c", "The 20th. Our auto policy is with another carrier and renews in January."],
+      ["a", "Thanks. Do you already work with a Crest associate or broker?"],
+      ["c", "No, this is our first time."],
+      ["a", "No problem. Would you prefer a call or an email from the Flagstaff team, and when?"],
+      ["c", "A call tomorrow, after 3 p.m. Can you tell me the price now?"],
+      ["a", "A licensed consultant will go over pricing and options. I've sent them your closing date, renewal month and requested time."],
+    ],
+  },
+  build: {
+    name: "An intake desk that never closes, routed to the right office",
+    what: "Every quote form, call and message gets an answer in minutes, day or night, with the details captured and booked into the right office's calendar. Licensed staff do the quoting.",
+    timeline: "Live for the first offices in about two weeks, including the Wyoming locations as they join.",
+  },
+  kit: {
+    title: "Client Response Kit",
+    autoReplies: [
+      { channel: "Email", when: "“Get a Consult” form, any time", text: "Thanks for reaching out to Crest Insurance Group. We've received your request for [home / auto / both]. A licensed consultant from our [office] office will [call / email] you by [time, e.g. the end of the next business day]. If you have a policy renewal or closing date coming up, reply with it and we'll prioritise accordingly." },
+      { channel: "Email", when: "small-business quote tool", text: "Thanks, your business quote request is in. A commercial specialist will review it and contact you by [time]. To speed things up, reply with your current policy declarations page if you have one handy." },
+      { channel: "Text", when: "missed call after hours", text: "Hi, this is Crest Insurance Group. Our office is closed right now and opens at [time]. To report a claim tonight, call your carrier's claim line: [where to find it]. For anything else, reply here and we'll get back to you [tomorrow morning]." },
+    ],
+    formLines: [
+      { where: "Under “Get a Consult”", text: "A licensed consultant will contact you within [one business day], by phone or email, whichever you prefer." },
+      { where: "Under the small-business quote tool", text: "We review every business request personally and reply within [time]. No obligation, no automated quotes." },
+    ],
+    voicemail: { label: "Any office, after hours, 30 seconds", text: "You've reached Crest Insurance Group, [office]. We're closed right now; our hours are [hours]. If you need to report a claim, please call the claim number on your policy or carrier app; you can also find it at [link]. Otherwise leave your name, number and a short message, and we'll call you back [the next business morning]. Thank you." },
+    reviewReplies: [
+      { to: "Reply to “complete lack of follow through” (Tucson, Google)", text: "Thank you for telling us. Follow-through is the core of our job, and we fell short. We'd like to put it right: please contact [office manager name] at [number or email], and we'll review your file personally and confirm every next step in writing. We've also [what changed, e.g. added a written follow-up to every client request]." },
+      { to: "Reply to “great at responding to my questions” (Tucson, Google)", text: "Thank you! Quick, clear answers are what we aim for every time. We appreciate you trusting us with your coverage." },
+      { to: "Reply to “knowledgeable, professional, responsive” (Tucson, Google)", text: "Thank you for such kind words about the team. We'll make sure everyone sees this. Here whenever you need us." },
+    ],
+    checklist: [
+      { where: "Homepage office list", url: "https://www.crestins.com/", item: "Hours added to all 18 office entries." },
+      { where: "Contact page sidebar", url: "https://www.crestins.com/contact/", item: "Scottsdale and Mesa reconciled with the homepage list." },
+      { where: "Flagstaff, Birdeye", url: "https://reviews.birdeye.com/crest-insurance-group-155348056113279", item: "Profile claimed; hours match Google." },
+      { where: "Tucson, Birdeye", url: "https://reviews.birdeye.com/crest-insurance-group-148367795690266", item: "Hours match Google and the website." },
+      { where: "Quote form", url: "https://crestins.com/crest-quote/", item: "One “what happens next” line added under the button." },
+      { where: "Wyoming offices (Tegeler)", item: "Laramie and Rawlins listings match the website; other locations added as they join." },
+      { where: "Homepage or contact page", item: "Short claims and after-hours box with carrier claim lines." },
+    ],
+  },
+  method: {
+    read: ["crestins.com homepage, contact page and quote form", "Birdeye profiles for Tucson and Flagstaff", "Public Google reviews shown on Birdeye", "CIVC press release on the Tegeler acquisition"],
+    notDone: ["We didn't call or submit any form, so we can't say how after-hours contacts are handled in practice.", "We didn't open the client portal."],
+  },
+};
