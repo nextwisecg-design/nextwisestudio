@@ -64,21 +64,19 @@ const notFoundPage = () =>
   page(404, `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Not found | NEXTWISE</title><link rel="stylesheet" href="/assets/audit.css?v=${V}"><main class="sec"><div class="w"><h1>This audit isn't available.</h1><p>It may not be published yet. <a href="/">nextwise.studio</a></p></div></main>`, "public, s-maxage=60");
 
 // Every 404 says why in the function log (no keys, no content), so a broken preview link is easy to trace.
-// Temporary: a preview request (?k=) that fails gets its own status code, so the reason shows
-// in the request log even when function logs are missing. Same page for the visitor.
-const CODE: Record<string, number> = { "no-k": 400, "short-key": 422, "key-mismatch": 409, "no-row": 410, "no-json": 424, "slug-differs": 417, "no-kit": 416, config: 503 };
 const notFound = (reason = "") => {
   if (reason) console.log(JSON.stringify({ audit: "404", why: reason, ...diag }));
-  const r = notFoundPage();
-  const code = diag.hasK ? CODE[reason] || (reason.startsWith("invalid") ? 406 : 0) : 0;
-  return code ? new Response(r.body, { status: code, headers: r.headers }) : r;
+  return notFoundPage();
 };
 let diag: Record<string, unknown> = {};
 
 export default async (req: Request, context: any) => {
   const url = new URL(req.url);
   // The preview key can arrive on req.url or, behind some routes, only on context.url.
-  const k = url.searchParams.get("k") ?? (context?.url ? new URL(context.url).searchParams.get("k") : null) ?? "";
+  // Preview key: from the path /audit/<slug>/p/<key>/ (query strings don't reach this function
+  // in production; the audit-key edge function turns ?k= links into this form).
+  const fromPath = String(context?.params?.key || "");
+  const k = fromPath || url.searchParams.get("k") || "";
   diag = { slug: String(context?.params?.slug || ""), hasK: k.length > 0, reqQuery: url.search.length > 0 };
   if (!url.pathname.endsWith("/")) return Response.redirect(new URL(url.pathname + "/" + url.search, url), 301);
   const slug = String(context.params.slug || "");
@@ -107,7 +105,7 @@ export default async (req: Request, context: any) => {
     if (kit && !a.kit) return notFound("no-kit");
 
     let html = kit ? renderKit(a, V, { draft: preview }) : renderAudit(a, V, { draft: preview });
-    if (preview) {
+    if (preview && !fromPath) {
       const q = `?k=${encodeURIComponent(key)}`;
       html = html.replace('href="kit/"', `href="kit/${q}"`).replace('href="../"', `href="../${q}"`);
     }
@@ -120,6 +118,9 @@ export default async (req: Request, context: any) => {
 };
 
 export const config: Config = {
-  path: ["/audit/:slug", "/audit/:slug/", "/audit/:slug/kit", "/audit/:slug/kit/"],
+  path: [
+    "/audit/:slug", "/audit/:slug/", "/audit/:slug/kit", "/audit/:slug/kit/",
+    "/audit/:slug/p/:key", "/audit/:slug/p/:key/", "/audit/:slug/p/:key/kit", "/audit/:slug/p/:key/kit/",
+  ],
   preferStatic: true,
 };
