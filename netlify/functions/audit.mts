@@ -64,9 +64,14 @@ const notFoundPage = () =>
   page(404, `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Not found | NEXTWISE</title><link rel="stylesheet" href="/assets/audit.css?v=${V}"><main class="sec"><div class="w"><h1>This audit isn't available.</h1><p>It may not be published yet. <a href="/">nextwise.studio</a></p></div></main>`, "public, s-maxage=60");
 
 // Every 404 says why in the function log (no keys, no content), so a broken preview link is easy to trace.
+// Temporary: a preview request (?k=) that fails gets its own status code, so the reason shows
+// in the request log even when function logs are missing. Same page for the visitor.
+const CODE: Record<string, number> = { "no-k": 400, "short-key": 422, "key-mismatch": 409, "no-row": 410, "no-json": 424, "slug-differs": 417, "no-kit": 416, config: 503 };
 const notFound = (reason = "") => {
   if (reason) console.log(JSON.stringify({ audit: "404", why: reason, ...diag }));
-  return notFoundPage();
+  const r = notFoundPage();
+  const code = diag.hasK ? CODE[reason] || (reason.startsWith("invalid") ? 406 : 0) : 0;
+  return code ? new Response(r.body, { status: code, headers: r.headers }) : r;
 };
 let diag: Record<string, unknown> = {};
 
@@ -85,11 +90,14 @@ export default async (req: Request, context: any) => {
     if (!row) return notFound("no-row");
     const props = row.properties || {};
     const status = props.Status?.select?.name || props.Status?.status?.name || "";
-    const key = text(props["Cheie preview"]?.rich_text).trim();
+    // Find the key column by name, ignoring case and stray spaces.
+    const norm = (n: string) => n.normalize("NFKC").replace(/\s+/g, " ").trim().toLowerCase();
+    const keyProp = props["Cheie preview"] ?? Object.entries(props).find(([n]) => norm(n) === "cheie preview")?.[1];
+    const key = text(keyProp?.rich_text ?? keyProp?.title).trim();
     const approved = status === "Aprobat";
     const preview = !approved && key.length >= 12 && k.trim() === key;
     Object.assign(diag, { status, keyLen: key.length });
-    if (!approved && !preview) return notFound(k ? "key-mismatch" : "not-approved");
+    if (!approved && !preview) return notFound(!k ? "no-k" : key.length < 12 ? "short-key" : "key-mismatch");
 
     const a = await readJson(row.id);
     if (!a) return notFound("no-json");
