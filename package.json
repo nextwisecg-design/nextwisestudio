@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "nextwise.studio — market-aware site with live AI diagnosis",
   "scripts": {
-    "build": "node build.mjs",
-    "pdfs": "node scripts/pdfs.mjs"
+    "build": "node build.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.5.0",

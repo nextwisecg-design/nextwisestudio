@@ -12,8 +12,6 @@ Static site with four market variants, live AI features and IP-based routing, on
 | `netlify/functions/ask.mts` | `/api/ask` — answers questions next to the FAQ |
 | `netlify/functions/translate.mts` | `/api/translate` — live AI translation into 24 more languages, cached forever in Blobs |
 | `netlify/edge-functions/market.ts` | `/` → `/us/`, `/uae/`, `/ro/` or `/global/` by IP; the market picker's cookie wins; bots are not redirected |
-| `src/audits/<slug>.mjs` | One free audit per prospect → `nextwise.studio/audit/<slug>/` (never indexed) |
-| `src/audit-template.mjs`, `src/audit.css` | The audit one-pager design |
 | `DESIGN.md` | Design tokens and rules |
 
 Pages: `/global/`, `/us/`, `/uae/`, `/ro/` (Romanian), plus `/global/ro/`, `/us/ro/`, `/uae/ro/`, `/ro/en/`. Any other language: `?lang=de`, `?lang=ar`, …
@@ -38,6 +36,4 @@ Live, after approval: same command with `--prod` instead of `--alias v2`.
 - Replace `CAL_RO` with Cristi's / Alex's Cal.com link when it exists.
 
 ## Free audits
-1. Copy an existing file in `src/audits/`, rename it to the prospect's slug, fill in the fields from the audit in Notion.
-2. Every finding needs a source URL; status is `ok`, `warn`, `bad` or `unknown`. No invented numbers: the calculator asks the prospect for theirs.
-3. Deploy (same command as above). The link to send: `https://nextwise.studio/audit/<slug>/`.
+Removed on 22.11.2026. Old `/audit/…` links redirect to the home page (`netlify.toml`).

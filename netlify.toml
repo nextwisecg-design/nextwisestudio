@@ -32,7 +32,15 @@
   to = "/global/"
   status = 301
 
-[[headers]]
-  for = "/audit/*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
+# Free audits were removed on 22.11.2026: old /audit/ links go to the home page
+[[redirects]]
+  from = "/audit"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/audit/*"
+  to = "/"
+  status = 301
+  force = true
