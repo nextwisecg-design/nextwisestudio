@@ -1,0 +1,382 @@
+NEXTWISE · Site nou · versiunea 5 · Reactor + planetă
+Intră în site
+Recepție
+pornit
+Follow-up
+Documente
+Marketing
+Operațiuni
+Tablou
+NEXTWISE
+Sisteme AI
+Site-uri
+Portofoliu
+Cum lucrăm
+Scrie-ne
+H1
+Construim agenți AI și automatizări, le legăm de programele pe care le folosești deja și rămânem lângă tine după pornire.
+Vezi ce am construit
+Ce construim
+Recepție și cereri
+Follow-up și ofertare
+Operațiuni interne
+Tablou de conducere
+Șase module care lucrează împreună.
+Alegem ce are nevoie firma ta și le legăm de programele pe care le folosești deja.
+Răspuns pe WhatsApp, site și telefon, cu programări făcute direct din conversație.
+Nicio ofertă trimisă și uitată. Fiecare client primește un răspuns.
+Oferte, contracte și fișe, generate din șabloanele firmei tale.
+Postări, video scurt și recenzii, publicate doar cu aprobarea ta.
+Sarcini, termene și evidențe, ținute la zi fără tabele paralele.
+Cifrele firmei într-un singur ecran și un raport scurt pe telefon.
+Site de prezentare pentru firma ta.
+Pentru firme mici care nu au site sau au unul care nu le mai reprezintă. Vezi macheta făcută pentru firma ta înainte să plătești ceva.
+de la 200 €
+mentenanță de la 30 € pe lună
+Prețurile includ TVA.
+Cere macheta
+Vezi un site făcut de noi
+Schiță de principiu. Macheta reală se face cu datele firmei tale.
+Ce primești
+O pagină clară, cu serviciile și datele de contact
+Făcută pornind de la datele publice ale firmei tale
+Arată bine pe telefon
+Personalizare printr-un formular de câteva minute
+Găzduire și mentenanță incluse în abonament
+Plată cu cardul sau cu factură
+Cum merge
+Vorbim
+Ne suni sau ne scrii. Nu plătești nimic.
+Vezi macheta
+Îți trimitem site-ul făcut pentru firma ta.
+Plătești doar dacă îți place
+Cu cardul sau cu factură.
+Completezi formularul și publicăm
+Pui textele și pozele tale în câteva minute.
+Ce am construit și pentru cine.
+Deschide fișa tehnică de pe fiecare proiect ca să vezi ce e sub capotă.
+sistem intern, fără adresă publică
+Casa Alesia
+Sistem de operare cu agenți AI
+Sistem intern
+Complex turistic și de evenimente, județul Cluj
+Restaurant, evenimente, cazare și catering, cu aceeași bucătărie. Un singur sistem pe roluri, în care agenții AI propun, iar oamenii aprobă.
+Ce am livrat
+Calendar comun pentru camere, săli, evenimente și catering
+Comenzi de la mese, direct pe telefonul ospătarului
+Ecrane în timp real pentru bar și bucătărie
+Configurator de eveniment în trei limbi, cu avans plătit online
+Agenți AI care propun și așteaptă aprobarea unui om
+Next.js
+PostgreSQL
+Agenți AI
+Server local
+Deschide fișa tehnică
+Sistem intern, fără adresă publică
+NEXTWISE HQ
+Tablou de conducere cu agenți AI
+Live, intern
+Sistemul nostru intern
+Locul din care conducem firma: lead-uri, task-uri, încasări, postări și rapoarte. Agenții AI lucrează după program, iar oamenii aprobă.
+Lead-uri, task-uri și încasări într-un singur loc
+Agenți AI programați, organizați pe echipe
+Postări aprobate de om și publicate automat
+Mod de apeluri pentru vânzări, cu un lead pe ecran
+Raport de dimineață pe email și rapoarte PDF
+React
+Neon Postgres
+Netlify
+Notion
+Agenți Claude
+grupulschiorilor.ro
+Grupul Schiorilor
+Platformă de membri
+Live
+Comunitate de schiori din România
+Site și platformă de membri cu abonamente. Plățile, facturile și treburile de zi cu zi merg singure.
+Platformă de membri cu abonamente plătite cu cardul
+Facturi emise automat după fiecare plată
+Notificări trimise membrilor
+Rutină automată care rulează în fiecare dimineață
+Domeniu propriu, găzduire și suport IT
+Stripe
+Oblio
+Funcții serverless
+cosminapetrescu.netlify.app
+Cosmina Petrescu
+Site de prezentare
+Salon de manichiură și pedichiură
+Site de prezentare pe o singură pagină, gata de arătat clientelor. Exact tipul de site pe care îl facem pentru firme mici.
+Site pe o pagină, cu serviciile salonului
+Găzduire inclusă
+HTML
+Patru pași până la un sistem pornit.
+Pornim mic, pe cazuri reale, și extindem doar ce se dovedește util.
+Discuție
+Înțelegem cum lucrează firma azi și unde se pierde timp.
+Plan
+Alegem împreună ce se construiește întâi și cum arată reușita.
+Pilot
+Pornim pe o parte din firmă, pe cazuri reale.
+Pornire
+Extindem, instruim echipa și rămânem pentru mentenanță.
+Agentul propune, omul aprobă. Nimic nu pleacă din firmă fără un „da”.
+Agenți mici, cu o singură sarcină fiecare.
+Datele firmei rămân ale firmei, cu acces pe roluri.
+Nu promitem cifre pe care nu le putem dovedi.
+Spune-ne unde pierzi cel mai mult timp.
+Darius
+darius@nextwise.studio
+WhatsApp
+Denis
+denis@nextwise.studio
+Telefon
+NEXTWISE AI STUDIO S.R.L.
+Sediu social: str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, jud. Bacău
+Nr. Reg. Com.: J04/662/2023
+CUI: 48024527
+Capital social: 200 lei
+Email: darius@nextwise.studio
+Telefon: 0756 079 049
+Termeni și condiții
+Politica de confidențialitate
+Politica de cookie-uri
+ANPC
+© 2026 NEXTWISE AI STUDIO S.R.L.
+NEXTWISE, AI Systems Studio
+Închide
+Complexul lucra cu patru activități și o singură bucătărie, fiecare cu evidența ei. Le-am adus într-un singur sistem, pe roluri, care rulează pe un server aflat chiar la ei. Sistemul este intern, de aceea nu are adresă publică, și este în implementare.
+Ce am făcut
+Calendar comun
+Camere, săli, evenimente și catering într-un singur calendar, sincronizat cu Google Calendar.
+Comenzi de la mese
+Aplicație web pe telefonul ospătarului. Comanda ajunge la bar, la bucătărie și în casa de marcat existentă.
+Ecranele barului și bucătăriei
+Comenzile apar în timp real pe televizorul din bucătărie și pe telefon.
+Configurator de eveniment
+Pagină publică în română, engleză și germană: pachete, extra-uri, sala văzută în 3D și avans plătit online.
+Bucătărie
+Necesarul pe eveniment calculat din rețetar, ore, personal, mise en place și pierderi.
+Sarcini
+Pe persoană, cu timpul lucrat contorizat. Un agent se oferă să preia sarcinile pe care le poate face singur.
+Furnizori
+Compară ofertele, propune comanda și o trimite doar după „da”, în plafoane fixe.
+Cifrele zilei
+Vânzări, mese ocupate, stoc și marjă pe farfurie, citite din casa de marcat.
+Confirmări, numărul final de invitați, remindere și cereri de recenzie.
+Companionul direcției cu propuneri zilnice, agentul de ocupare, companionul bucătăriei și asistentul de pe pagina de evenimente.
+Cum circulă datele
+Telefon ospătar
+TV bucătărie
+Pagina de evenimente
+Casa de marcat
+Google Calendar
+Fișa tehnică
+Găzduire
+server local, în complex; merge și fără internet
+Aplicație
+Next.js 16, React 19, TypeScript
+Bază de date
+PostgreSQL 17, 20 de migrații SQL
+Timp real
+LISTEN/NOTIFY → Server-Sent Events, cu reîmprospătare de rezervă la 10 s
+Sincronizare
+Google Calendar într-un singur sens; coadă scrisă de trigger în aceeași tranzacție, reîncercare de la 1 la 60 min
+Agenți
+Claude API cu cheia clientului; plafoane verificate în trigger, propunerea validată la COMMIT
+Acces
+roluri și permisiuni aplicate pe server, sesiuni în bază, jurnal de audit
+Teste
+376 de teste de cod (Vitest) și 197 în browser (Playwright), pe trei mărimi de ecran, la fiecare modificare
+Veghe
+alertă la serviciu căzut și la backup mai vechi de 26 h, semn de viață extern
+Backup
+zilnic, criptat
+Proprietate
+codul, datele și conturile sunt pe numele clientului
+Am construit pentru noi ce construim și pentru clienți: un singur ecran din care se vede tot ce mișcă în firmă. Agenții scriu, oamenii aprobă, iar tabloul arată în fiecare dimineață ce e de făcut. Este sistem intern, de aceea nu are adresă publică.
+Tabloul principal
+Ținta lunii, încasările și stadiul fiecărui lead, dintr-o privire.
+Lead-uri și apeluri
+Fișa fiecărui lead, ritmul de contact și un mod de apeluri cu un singur lead pe ecran.
+Task-uri și aprobări
+Fiecare om își vede sarcinile. Ce propun agenții așteaptă un „da”.
+Echipa de agenți
+Organigramă pe patru echipe, program, jurnal și stare la zi pentru fiecare agent.
+Lecții
+Feedbackul oamenilor se adună într-un loc pe care agenții îl citesc la fiecare rulare.
+Social
+Postări cu text și imagine, aprobate de om, apoi publicate automat.
+Rapoarte
+Raport de dimineață pe email și rapoarte PDF de seară.
+Roluri
+Conducerea vede tot. Vânzările văd doar lead-urile și sarcinile lor.
+Echipa
+Buffer
+Email
+PDF
+HQ: React + funcții
+Netlify, domeniu propriu, HTTPS
+React 18, Vite, TypeScript; 44 de componente de ecran
+Server
+9 funcții serverless, din care 3 programate și 3 în fundal
+Neon Postgres, 14 tabele, 12 migrări aplicate automat după fiecare publicare
+Sursă
+Notion, sincronizat din oră în oră; un rând se rescrie doar dacă s-a schimbat
+Scriere
+butoanele scriu întâi în Notion, apoi în baza site-ului
+15 agenți Claude activi, pe 4 echipe, fiecare cu program și jurnal
+Conturi
+Netlify Identity, doar pe invitație; roluri pentru conducere și vânzări
+Imagini
+postările se desenează pe server, cu Satori și Resvg
+PDF generat cu pdf-lib, trimis pe email dimineața
+Publicare
+Buffer API, doar după aprobarea unui om
+Secrete
+doar în variabile de mediu, niciodată în cod
+O zi obișnuită în HQ
+SDR România
+aduce lead-urile noi pentru vânzări
+Social Media Manager
+scrie postările de mâine, de aprobat
+Executive Assistant
+sortează emailurile și pregătește răspunsuri
+VP Sales
+verifică lead-urile înainte de apeluri
+Operations Associate
+face task-urile aprobate
+Software Engineer
+publică reparațiile aprobate
+Chief of Staff
+scrie raportul de seară
+Clubul avea nevoie de un loc în care schiorii își fac cont, plătesc abonamentul și primesc factura, fără ca cineva să stea după fiecare plată. Am construit platforma, am legat plățile de facturare și o ținem în funcțiune.
+Cont de membru
+Înscriere cu confirmare pe email.
+Abonamente
+Lunar sau anual, plătite cu cardul. Membrul își schimbă cardul sau anulează singur.
+Card de membru
+Cu cod QR, activ cât timp abonamentul este plătit.
+Facturi
+Emise automat la fiecare plată, inclusiv la reînnoiri.
+Pachete pentru ofertanți
+Abonamente separate, pe lângă cele de membru.
+Administrare
+Membri, facturi și reîncercare cu un click când o factură nu a ieșit.
+Întreținere
+Rutină automată în fiecare dimineață, domeniu, găzduire și suport IT.
+Deschide grupulschiorilor.ro
+Membru
+Administrator
+Identity
+Cron
+Netlify Functions
+Netlify Blobs
+funcții serverless (Netlify Functions)
+Stocare
+Netlify Blobs, înregistrări JSON pe chei
+Netlify Identity, cu confirmare pe email
+Plăți
+Stripe Checkout și Customer Portal, abonamente recurente
+Webhook
+semnătură verificată, 5 tipuri de evenimente
+Facturare
+Oblio API, cheie de idempotență pe fiecare factură, erori ținute separat până reușesc
+Automatizare
+funcție programată, în fiecare dimineață
+Un salon nu are nevoie de o platformă, are nevoie de o pagină care arată bine pe telefon și spune clar ce face. Asta am livrat.
+O singură pagină
+Serviciile salonului, pe rând, fără meniuri în care să te pierzi.
+Pentru telefon
+Gândită întâi pentru ecranul mic, de unde vin clientele.
+Publicată și ținută online de noi.
+Deschide cosminapetrescu.netlify.app
+Clientă
+CDN Netlify
+Pagină statică
+Netlify, CDN, HTTPS automat
+Pagină
+HTML și CSS, fără bază de date
+fiecare versiune se publică întreagă, fără pagini pe jumătate
+Informații legale
+Ultima actualizare: 24.11.2026
+1. Cine suntem
+Site-ul nextwise.studio este administrat de NEXTWISE AI STUDIO S.R.L., cu sediul social în str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, jud. Bacău, înregistrată la Registrul Comerțului sub nr. J04/662/2023, CUI 48024527, capital social 200 lei. Ne poți scrie la darius@nextwise.studio sau ne poți suna la 0756 079 049.
+2. Ce este acest site
+Site-ul prezintă serviciile NEXTWISE: sisteme cu agenți AI, automatizări și site-uri de prezentare.
+Informațiile de pe site sunt de prezentare. Nu sunt o ofertă fermă. Un serviciu se contractează doar pe baza unei oferte și a unui contract scris sau a unei comenzi confirmate de noi.
+3. Serviciile
+Sisteme AI și automatizări:
+se stabilesc după o discuție, pe bază de ofertă și contract. Termenele, prețul și ce se livrează sunt cele din contract.
+Site de prezentare:
+îți arătăm o machetă făcută pentru firma ta, fără nicio obligație. Dacă o vrei, plătești, completezi un formular cu textele și pozele tale, iar noi publicăm site-ul. Găzduirea și mentenanța se plătesc lunar.
+Abonamentul de mentenanță are o durată minimă între 6 și 12 luni, stabilită la comandă.
+4. Prețuri și plată
+Prețurile de pe site sunt în euro, includ TVA și sunt prețuri de pornire.
+Plata se face cu cardul, printr-un procesator de plăți, sau prin transfer bancar, pe baza facturii.
+Prețul final este cel din ofertă sau din pagina de plată, afișat înainte să plătești.
+5. Dacă ești consumator
+Dacă ești persoană fizică și cumperi în afara activității tale profesionale, ai drepturile din OUG nr. 34/2014, inclusiv dreptul de a te retrage din contract în 14 zile, fără să dai un motiv, în condițiile și cu excepțiile din lege.
+Cererea de retragere o trimiți la darius@nextwise.studio, iar noi îți confirmăm primirea pe email.
+6. Drepturi de autor
+Textele, grafica, animațiile și codul site-ului aparțin NEXTWISE sau sunt folosite cu acordul titularilor. Nu le poți copia sau refolosi fără acordul nostru scris.
+Numele și siglele clienților din portofoliu aparțin acestora și apar cu acordul lor.
+7. Răspundere
+Ne străduim ca informațiile de pe site să fie corecte și la zi. Pot apărea erori, pe care le corectăm când le aflăm.
+Nu răspundem pentru conținutul site-urilor externe către care trimitem.
+8. Reclamații și litigii
+Dacă ai o nemulțumire, scrie-ne la darius@nextwise.studio. Îți răspundem în cel mult 30 de zile.
+Consumatorii se pot adresa Autorității Naționale pentru Protecția Consumatorilor (
+anpc.ro
+) și pot folosi soluționarea alternativă a litigiilor (
+reclamatiisal.anpc.ro
+Acestor termeni li se aplică legea română. Litigiile care nu se rezolvă pe cale amiabilă se judecă de instanțele competente din România.
+9. Modificări
+Putem actualiza acești termeni. Versiunea în vigoare este cea publicată pe site, cu data ultimei modificări.
+1. Cine răspunde de datele tale
+Operatorul datelor este NEXTWISE AI STUDIO S.R.L., cu sediul social în str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, jud. Bacău, înregistrată la Registrul Comerțului sub nr. J04/662/2023, CUI 48024527, capital social 200 lei. Pentru orice întrebare despre datele tale, scrie-ne la darius@nextwise.studio.
+2. Ce date prelucrăm
+Când ne contactezi
+(email, telefon, WhatsApp): numele, numărul de telefon, adresa de email, firma și ce ne scrii.
+Când devii client:
+datele de facturare și datele persoanei de contact.
+Date tehnice:
+furnizorul de găzduire păstrează jurnale tehnice (adresa IP, tipul de browser, data accesării), necesare pentru funcționarea și securitatea site-ului.
+Site-ul nu are formulare și nu îți cere să îți faci cont.
+3. De ce le prelucrăm și în ce temei
+ca să îți răspundem și să îți facem o ofertă: demersuri la cererea ta, înainte de un contract (art. 6 alin. 1 lit. b din GDPR);
+ca să încheiem și să derulăm contractul: executarea contractului (lit. b);
+facturare și contabilitate: obligație legală (lit. c);
+securitatea site-ului: interes legitim (lit. f).
+Nu îți trimitem mesaje comerciale fără acordul tău.
+4. Cui le transmitem
+Folosim furnizori care prelucrează date în numele nostru: găzduirea site-ului (Netlify), email, procesatorul de plăți și programul de facturare. Datele ajung la autorități doar când legea ne obligă.
+Unii furnizori sunt în afara Spațiului Economic European. În aceste cazuri transferul se face cu garanțiile cerute de GDPR (decizie de adecvare sau clauze contractuale standard).
+5. Cât timp le păstrăm
+Mesajele care nu duc la un contract le păstrăm cel mult 12 luni. Datele din contracte și facturi le păstrăm pe durata cerută de legislația financiar-contabilă.
+6. Drepturile tale
+Ai dreptul de acces, de rectificare, de ștergere, de restricționare, de portabilitate și de opoziție, iar acolo unde prelucrarea se bazează pe acord, îl poți retrage oricând.
+Ne scrii la darius@nextwise.studio și îți răspundem în cel mult o lună.
+Dacă ești nemulțumit, poți face plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (
+dataprotection.ro
+7. Decizii automate
+Nu luăm decizii cu efecte juridice asupra ta doar prin mijloace automate și nu facem profilare.
+8. Modificări
+Dacă schimbăm această politică, publicăm versiunea nouă pe site, cu data ultimei modificări.
+Ce folosim
+Site-ul nu folosește cookie-uri de analiză sau de publicitate și nu încarcă instrumente de urmărire de la terți.
+Fonturile și animațiile sunt încărcate de pe site, nu de la terți.
+Dacă se schimbă ceva
+Dacă vom adăuga statistici de trafic, hărți, video sau alte servicii care pun cookie-uri, îți vom cere acordul înainte, printr-un banner în care refuzul e la fel de ușor ca acceptul, și vom lista aici fiecare cookie.
+Linkuri externe
+Când apeși pe un link către alt serviciu (de exemplu WhatsApp sau pagina de plată), se aplică politica acelui serviciu.
+NEXTWISE construiește sisteme AI și site-uri pentru firme din România.
+Meniu
+Tehnologii
+ANPC, Soluționarea alternativă a litigiilor
+Soluționarea online a litigiilor
+Închide fișa
+Schema sistemului Casa Alesia
+Schema sistemului NEXTWISE HQ
+Schema sistemului Grupul Schiorilor
+Schema sistemului Cosmina Petrescu

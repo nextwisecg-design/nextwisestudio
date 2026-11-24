@@ -1,0 +1,382 @@
+NEXTWISE | AI systems and websites for businesses
+Enter the site
+Reception
+online
+Follow-up
+Documents
+Marketing
+Operations
+Dashboard
+NEXTWISE
+AI systems
+Websites
+Portfolio
+How we work
+Write to us
+H1
+We build AI agents and automations, connect them to the software you already use and stay with you after launch.
+See what we built
+What we build
+Reception and enquiries
+Follow-up and quoting
+Internal operations
+Management dashboard
+Six modules that work together.
+We pick what your business needs and connect it to the software you already use.
+Replies on WhatsApp, website and phone, with bookings made right in the conversation.
+No quote sent and forgotten. Every customer gets an answer.
+Quotes, contracts and forms, generated from your company's templates.
+Posts, short video and reviews, published only with your approval.
+Tasks, deadlines and records, kept up to date without parallel spreadsheets.
+Your company's numbers on one screen and a short report on your phone.
+A presentation website for your business.
+For small businesses with no website, or with one that no longer represents them. See the mockup made for your business before you pay anything.
+from €200
+maintenance from €30 a month
+Prices include VAT.
+Ask for a mockup
+See a site we made
+Illustrative sketch. The real mockup is built with your business details.
+What you get
+One clear page with your services and contact details
+Built from your business's public information
+Looks good on a phone
+Personalised through a form that takes a few minutes
+Hosting and maintenance included in the subscription
+Pay by card or by invoice
+How it works
+We talk
+Call us or write to us. You pay nothing.
+You see the mockup
+We send you the site made for your business.
+You pay only if you like it
+By card or by invoice.
+You fill in the form and we publish
+Add your own text and photos in a few minutes.
+What we built, and for whom.
+Open the technical sheet on each project to see what is under the hood.
+internal system, no public address
+Casa Alesia
+Operating system with AI agents
+Internal system
+Tourism and events venue, Cluj county
+Restaurant, events, accommodation and catering, sharing one kitchen. A single role-based system where AI agents propose and people approve.
+What we delivered
+Shared calendar for rooms, halls, events and catering
+Table orders, straight from the waiter's phone
+Real-time screens for the bar and kitchen
+Event configurator in three languages, with a deposit paid online
+AI agents that propose and wait for a person's approval
+Next.js
+PostgreSQL
+AI agents
+Local server
+Open the technical sheet
+Internal system, no public address
+NEXTWISE HQ
+Management dashboard with AI agents
+Live, internal
+Our internal system
+The place we run the company from: leads, tasks, revenue, posts and reports. AI agents work on a schedule and people approve.
+Leads, tasks and revenue in one place
+Scheduled AI agents, organised in teams
+Posts approved by a person and published automatically
+Call mode for sales, with one lead on screen
+Morning report by email and PDF reports
+React
+Neon Postgres
+Netlify
+Notion
+Claude agents
+grupulschiorilor.ro
+Grupul Schiorilor
+Membership platform
+Live
+A community of skiers in Romania
+Website and membership platform with subscriptions. Payments, invoices and day-to-day chores run by themselves.
+Membership platform with subscriptions paid by card
+Invoices issued automatically after every payment
+Notifications sent to members
+Automatic routine that runs every morning
+Own domain, hosting and IT support
+Stripe
+Oblio
+Serverless functions
+cosminapetrescu.netlify.app
+Cosmina Petrescu
+Presentation website
+Manicure and pedicure salon
+A one-page presentation website, ready to show to clients. Exactly the kind of site we build for small businesses.
+One-page site with the salon's services
+Hosting included
+HTML
+Four steps to a running system.
+We start small, on real cases, and extend only what proves useful.
+Conversation
+We learn how the business works today and where time is lost.
+Plan
+Together we choose what gets built first and what success looks like.
+Pilot
+We start on one part of the business, on real cases.
+Launch
+We extend, train the team and stay on for maintenance.
+The agent proposes, a person approves. Nothing leaves the company without a “yes”.
+Small agents, each with a single job.
+The company's data stays the company's, with role-based access.
+We do not promise numbers we cannot prove.
+Tell us where you lose the most time.
+Darius
+darius@nextwise.studio
+WhatsApp
+Denis
+denis@nextwise.studio
+Phone
+NEXTWISE AI STUDIO S.R.L.
+Registered office: str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, Bacău county, Romania
+Trade Register no.: J04/662/2023
+Tax ID (CUI): 48024527
+Share capital: 200 lei
+Email: darius@nextwise.studio
+Phone: +40 756 079 049
+Terms and conditions
+Privacy policy
+Cookie policy
+ANPC
+© 2026 NEXTWISE AI STUDIO S.R.L.
+NEXTWISE, AI Systems Studio
+Close
+The venue ran four activities out of one kitchen, each with its own records. We brought them into a single role-based system that runs on a server on their premises. The system is internal, which is why it has no public address, and it is being rolled out.
+What we did
+Shared calendar
+Rooms, halls, events and catering in one calendar, synced with Google Calendar.
+Table orders
+A web app on the waiter's phone. The order reaches the bar, the kitchen and the existing till system.
+Bar and kitchen screens
+Orders appear in real time on the kitchen TV and on the phone.
+Event configurator
+A public page in Romanian, English and German: packages, extras, the hall shown in 3D and a deposit paid online.
+Kitchen
+Requirements per event calculated from the recipe book, hours, staff, mise en place and waste.
+Tasks
+Per person, with time worked tracked. An agent offers to take the tasks it can do by itself.
+Suppliers
+Compares offers, proposes the order and sends it only after a “yes”, within fixed limits.
+Daily figures
+Sales, occupied tables, stock and margin per plate, read from the till system.
+Confirmations, final guest count, reminders and review requests.
+The management companion with daily proposals, the occupancy agent, the kitchen companion and the assistant on the events page.
+How the data flows
+Waiter's phone
+Kitchen TV
+Events page
+Till system
+Google Calendar
+Technical sheet
+Hosting
+local server, on the premises; works without internet too
+Application
+Next.js 16, React 19, TypeScript
+Database
+PostgreSQL 17, 20 SQL migrations
+Real time
+LISTEN/NOTIFY → Server-Sent Events, with a fallback refresh every 10 s
+Sync
+Google Calendar one-way; queue written by a trigger in the same transaction, retry from 1 to 60 min
+Agents
+Claude API with the client's key; limits checked in a trigger, the proposal validated at COMMIT
+Access
+roles and permissions enforced on the server, sessions in the database, audit log
+Tests
+376 code tests (Vitest) and 197 browser tests (Playwright), on three screen sizes, on every change
+Monitoring
+alert when a service is down or the backup is older than 26 h, external heartbeat
+Backup
+daily, encrypted
+Ownership
+the code, data and accounts are in the client's name
+We built for ourselves what we build for clients: one screen that shows everything moving in the company. Agents write, people approve, and every morning the dashboard shows what needs doing. It is an internal system, which is why it has no public address.
+Main dashboard
+The month's target, revenue and the stage of every lead, at a glance.
+Leads and calls
+Each lead's record, the contact cadence and a call mode with a single lead on screen.
+Tasks and approvals
+Everyone sees their own tasks. What the agents propose waits for a “yes”.
+The agent team
+An org chart with four teams, a schedule, a log and current status for every agent.
+Lessons
+People's feedback is collected in one place that the agents read on every run.
+Social
+Posts with text and image, approved by a person, then published automatically.
+Reports
+Morning report by email and evening PDF reports.
+Roles
+Management sees everything. Sales see only their own leads and tasks.
+The team
+Buffer
+Email
+PDF
+HQ: React + functions
+Netlify, own domain, HTTPS
+React 18, Vite, TypeScript; 44 screen components
+Server
+9 serverless functions, 3 of them scheduled and 3 in the background
+Neon Postgres, 14 tables, 12 migrations applied automatically after every release
+Source
+Notion, synced every hour; a row is rewritten only if it changed
+Writes
+buttons write to Notion first, then to the site's database
+15 active Claude agents in 4 teams, each with a schedule and a log
+Accounts
+Netlify Identity, invite only; roles for management and sales
+Images
+posts are drawn on the server, with Satori and Resvg
+PDF generated with pdf-lib, emailed in the morning
+Publishing
+Buffer API, only after a person approves
+Secrets
+only in environment variables, never in code
+An ordinary day in HQ
+SDR Romania
+brings in the new leads for sales
+Social Media Manager
+writes tomorrow's posts, for approval
+Executive Assistant
+sorts the emails and prepares replies
+VP Sales
+checks the leads before calls
+Operations Associate
+does the approved tasks
+Software Engineer
+ships the approved fixes
+Chief of Staff
+writes the evening report
+The club needed a place where skiers create an account, pay their subscription and get the invoice, without anyone chasing each payment. We built the platform, tied payments to invoicing and we keep it running.
+Member account
+Sign-up with email confirmation.
+Subscriptions
+Monthly or yearly, paid by card. Members change their card or cancel by themselves.
+Membership card
+With a QR code, active as long as the subscription is paid.
+Invoices
+Issued automatically on every payment, renewals included.
+Packages for providers
+Separate subscriptions, alongside the member ones.
+Admin
+Members, invoices and a one-click retry when an invoice did not go out.
+Upkeep
+Automatic routine every morning, domain, hosting and IT support.
+Open grupulschiorilor.ro
+Member
+Administrator
+Identity
+Cron
+Netlify Functions
+Netlify Blobs
+serverless functions (Netlify Functions)
+Storage
+Netlify Blobs, JSON records by key
+Netlify Identity, with email confirmation
+Payments
+Stripe Checkout and Customer Portal, recurring subscriptions
+Webhook
+verified signature, 5 event types
+Invoicing
+Oblio API, an idempotency key on every invoice, errors kept separately until they succeed
+Automation
+scheduled function, every morning
+A salon does not need a platform. It needs a page that looks good on a phone and says clearly what it does. That is what we delivered.
+A single page
+The salon's services, one after another, with no menus to get lost in.
+For the phone
+Designed first for the small screen, where the clients come from.
+Published and kept online by us.
+Open cosminapetrescu.netlify.app
+Client
+Netlify CDN
+Static page
+Netlify, CDN, automatic HTTPS
+Page
+HTML and CSS, no database
+every version is published whole, with no half-updated pages
+Legal information
+Last updated: 24 November 2026
+1. Who we are
+The website nextwise.studio is operated by NEXTWISE AI STUDIO S.R.L., with its registered office at str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, Bacău county, Romania, registered with the Trade Register under no. J04/662/2023, tax ID (CUI) 48024527, share capital 200 lei. You can write to us at darius@nextwise.studio or call us on +40 756 079 049.
+2. What this website is
+The website presents NEXTWISE's services: systems with AI agents, automations and presentation websites.
+The information on the website is for presentation. It is not a binding offer. A service is contracted only on the basis of an offer and a written contract, or of an order confirmed by us.
+3. The services
+AI systems and automations:
+are agreed after a conversation, on the basis of an offer and a contract. The deadlines, the price and what is delivered are those in the contract.
+Presentation website:
+we show you a mockup made for your business, with no obligation. If you want it, you pay, fill in a form with your text and photos, and we publish the site. Hosting and maintenance are paid monthly.
+The maintenance subscription has a minimum term of 6 to 12 months, set when you order.
+4. Prices and payment
+The prices on the website are in euro, include VAT and are starting prices.
+Payment is made by card, through a payment processor, or by bank transfer, based on the invoice.
+The final price is the one in the offer or on the payment page, shown before you pay.
+5. If you are a consumer
+If you are an individual buying outside your professional activity, you have the rights set out in Government Emergency Ordinance no. 34/2014, including the right to withdraw from the contract within 14 days without giving a reason, under the conditions and with the exceptions laid down by law.
+You send the withdrawal request to darius@nextwise.studio, and we confirm receipt by email.
+6. Copyright
+The text, graphics, animations and code of the website belong to NEXTWISE or are used with the owners' consent. You may not copy or reuse them without our written consent.
+The names and logos of the clients in the portfolio belong to them and appear with their consent.
+7. Liability
+We work to keep the information on the website correct and up to date. Errors can occur, and we correct them when we learn of them.
+We are not responsible for the content of external websites we link to.
+8. Complaints and disputes
+If you have a complaint, write to us at darius@nextwise.studio. We reply within 30 days at most.
+Consumers may contact the National Authority for Consumer Protection (
+anpc.ro
+) and may use alternative dispute resolution (
+reclamatiisal.anpc.ro
+These terms are governed by Romanian law. Disputes that are not settled amicably are heard by the competent courts in Romania.
+9. Changes
+We may update these terms. The version in force is the one published on the website, with the date of the last change.
+1. Who is responsible for your data
+The data controller is NEXTWISE AI STUDIO S.R.L., with its registered office at str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, Bacău county, Romania, registered with the Trade Register under no. J04/662/2023, tax ID (CUI) 48024527, share capital 200 lei. For any question about your data, write to us at darius@nextwise.studio.
+2. What data we process
+When you contact us
+(email, phone, WhatsApp): your name, phone number, email address, company and what you write to us.
+When you become a client:
+billing details and the contact person's details.
+Technical data:
+the hosting provider keeps technical logs (IP address, browser type, date of access), needed for the website to work and stay secure.
+The website has no forms and does not ask you to create an account.
+3. Why we process it and on what basis
+to reply to you and make you an offer: steps taken at your request before a contract (Art. 6(1)(b) GDPR);
+to conclude and perform the contract: performance of the contract (point (b));
+invoicing and accounting: legal obligation (point (c));
+website security: legitimate interest (point (f)).
+We do not send you commercial messages without your consent.
+4. Who we share it with
+We use providers that process data on our behalf: website hosting (Netlify), email, the payment processor and the invoicing software. Data reaches the authorities only when the law requires it.
+Some providers are outside the European Economic Area. In those cases the transfer is made with the safeguards required by the GDPR (an adequacy decision or standard contractual clauses).
+5. How long we keep it
+Messages that do not lead to a contract are kept for 12 months at most. Data from contracts and invoices is kept for the period required by financial and accounting law.
+6. Your rights
+You have the right of access, rectification, erasure, restriction, portability and objection, and where processing is based on consent you can withdraw it at any time.
+Write to us at darius@nextwise.studio and we reply within one month at most.
+If you are not satisfied, you can lodge a complaint with the National Supervisory Authority for Personal Data Processing (
+dataprotection.ro
+7. Automated decisions
+We do not take decisions with legal effects on you by automated means alone, and we do not carry out profiling.
+8. Changes
+If we change this policy, we publish the new version on the website, with the date of the last change.
+What we use
+The website does not use analytics or advertising cookies and does not load third-party tracking tools.
+Fonts and animations are loaded from the website itself, not from third parties.
+If something changes
+If we add traffic statistics, maps, video or other services that set cookies, we will ask for your consent first, through a banner where refusing is as easy as accepting, and we will list every cookie here.
+External links
+When you follow a link to another service (for example WhatsApp or the payment page), that service's policy applies.
+NEXTWISE builds AI systems and websites for businesses in Romania.
+Menu
+Technologies
+ANPC, alternative dispute resolution
+Online dispute resolution
+Close the sheet
+System diagram for Casa Alesia
+System diagram for NEXTWISE HQ
+System diagram for Grupul Schiorilor
+System diagram for Cosmina Petrescu

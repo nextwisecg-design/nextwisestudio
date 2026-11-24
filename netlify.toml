@@ -1,23 +1,8 @@
+# nextwise.studio: site static (română la /, engleză la /en/). Nu are build, funcții sau edge functions.
+# Site-ul vechi (variante pe piețe, diagnosticul AI, audituri) e păstrat în legacy/ și nu se mai publică.
 [build]
-  command = "npm run build"
-  publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "22"
-
-[functions]
-  directory = "netlify/functions"
-  node_bundler = "esbuild"
-
-[[headers]]
-  for = "/fonts/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+  publish = "site"
+  command = "echo 'site static, fără build'"
 
 [[headers]]
   for = "/*"
@@ -26,13 +11,34 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# Old single-page anchors keep working
+# Adresele site-ului vechi duc la pagina nouă, în limba potrivită
 [[redirects]]
-  from = "/en/*"
-  to = "/global/"
+  from = "/ro/*"
+  to = "/"
   status = 301
 
-[[headers]]
-  for = "/audit/*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
+[[redirects]]
+  from = "/global/*"
+  to = "/en/"
+  status = 301
+
+[[redirects]]
+  from = "/us/*"
+  to = "/en/"
+  status = 301
+
+[[redirects]]
+  from = "/uae/*"
+  to = "/en/"
+  status = 301
+
+[[redirects]]
+  from = "/audit/*"
+  to = "/"
+  status = 302
+
+# Orice altă adresă necunoscută arată prima pagină
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
