@@ -314,9 +314,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .prod,.cta-box{animation-duration:24s}
 .pb-live.on i{animation-duration:3.4s}
 .gtip{position:fixed;left:0;top:0;z-index:6;width:250px;padding:12px 14px;border-radius:12px;background:#12131B;border:1px solid var(--line2);pointer-events:none;opacity:0;transition:opacity .18s var(--ease);display:grid;gap:3px}
-.gtip.on{opacity:1}.gtip.l{margin-left:-250px}
+.gtip.on{opacity:1}
 .gtip b{font-size:15px;font-weight:600}.gtip span{font-size:14px;line-height:1.4;color:var(--text2)}
-@media (prefers-reduced-motion:reduce){.i5 .rx::before{display:none}}
+@media (prefers-reduced-motion:reduce){.i5 .rx::before{display:none}.entered #intro.i4{transition:none}}
 
 /* ── v5: site-uri cu detalii, contact pe persoane, subsol legal, pagini legale */
 mark{background:rgba(255,181,71,.16);color:var(--amber);padding:0 5px;border-radius:4px}
@@ -414,11 +414,12 @@ footer.lg .wrap{display:block}
  .prod .l{padding:22px 44px 20px}.prod .r{padding:14px 44px}.mock{max-width:226px}
  .prod .lead{margin-top:8px}.price{margin-top:10px}.cta2{margin-top:12px}
  .pdet{gap:10px;padding:12px 44px 14px}.how span{font-size:14px}
+ #site-uri{padding-top:82px}
 }
 .links a.lang{display:inline-flex!important;align-items:center;justify-content:center;min-width:44px;height:38px;padding:0 12px;border:1px solid var(--line2);border-radius:999px;font-size:14px;font-weight:600;color:var(--text)}
 body.skip #intro{display:none}body.skip .site,body.skip .site *{transition-duration:0s!important;transition-delay:0s!important}
 </style>
-<noscript><style>#intro{display:none}.site{opacity:1;pointer-events:auto}body:not(.entered){overflow:auto;height:auto}.rv,.w>span,.hero .sub,.hero .cta{opacity:1;transform:none}</style></noscript>
+<noscript><style>#intro{display:none!important}.site{opacity:1;pointer-events:auto}body:not(.entered){overflow:auto;height:auto}.rv,.w>span,.hero .sub,.hero .cta{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
 <canvas id="fx" aria-hidden="true"></canvas>
@@ -688,7 +689,7 @@ body.skip #intro{display:none}body.skip .site,body.skip .site *{transition-durat
   <div class="sh-back" data-close></div>
   <div class="sh-panel" role="dialog" aria-modal="true" aria-labelledby="sh-t-cookies" tabindex="-1">
     <header class="sh-head"><div><p class="sh-kind">Legal information</p><h3 id="sh-t-cookies">Cookie policy</h3></div><button class="sh-x" type="button" data-close aria-label="Close">Close</button></header>
-    <div class="lg-body"><p class="draft">Last updated: 24 November 2026</p><h4>What we use</h4><p>The website does not use analytics or advertising cookies and does not load third-party tracking tools.</p><p>Fonts and animations are loaded from the website itself, not from third parties.</p><h4>If something changes</h4><p>If we add traffic statistics, maps, video or other services that set cookies, we will ask for your consent first, through a banner where refusing is as easy as accepting, and we will list every cookie here.</p><h4>External links</h4><p>When you follow a link to another service (for example WhatsApp or the payment page), that service's policy applies.</p></div>
+    <div class="lg-body"><p class="draft">Last updated: 24 November 2026</p><h4>What we use</h4><p>The website does not use analytics or advertising cookies and does not load third-party tracking tools.</p><p>Fonts and animations are loaded from the website itself, not from third parties.</p><p>The website remembers, only for the duration of your visit and only in your browser, that you have passed the opening animation. It is not a cookie and it does not reach us.</p><h4>If something changes</h4><p>If we add traffic statistics, maps, video or other services that set cookies, we will ask for your consent first, through a banner where refusing is as easy as accepting, and we will list every cookie here.</p><h4>External links</h4><p>When you follow a link to another service (for example WhatsApp or the payment page), that service's policy applies.</p></div>
   </div>
 </div>
 <script>
@@ -738,7 +739,7 @@ function globe(g,cy_,sy_,cx_,sx_){const m=W<760;
   c.fillStyle='#fff';c.beginPath();c.arc(p[0],p[1],on?4.6:3.4,0,6.2832);c.fill();c.strokeStyle='#8E7BFF';c.lineWidth=on?1.6:1;c.beginPath();c.arc(p[0],p[1],on?15:8+1.5*Math.sin(t*.7+i),0,6.2832);c.stroke();
   c.fillStyle=on?'#fff':'#EDEEF5';if(flip){c.textAlign='center';c.fillText(DEP[i][0],Math.max(tw/2+6,Math.min(W-tw/2-6,p[0])),p[1]-18)}else{c.textAlign=sd>0?'left':'right';c.fillText(DEP[i][0],ex+sd*(m?14:24),ey+5)}});
  if(tip){if(best!==hov){hov=best;if(hov>=0){tip.firstChild.textContent=DEP[hov][0];tip.lastChild.textContent=DEP[hov][1]}tip.classList.toggle('on',hov>=0)}
-  if(hov>=0){const left=bx>=g.cx;tip.classList.toggle('l',left);tip.style.transform='translate('+Math.round(bx+(left?-24:24))+'px,'+Math.round(by+22)+'px)';if(!RM)rotX-=g.spin/60}}
+  if(hov>=0){const left=bx>=g.cx;tip.classList.toggle('l',left);tip.style.transform='translate('+Math.max(8,Math.min(innerWidth-258,Math.round(left?bx-274:bx+24)))+'px,'+Math.round(by+22)+'px)';if(!RM)rotX-=g.spin/60}}
  c.globalAlpha=1}
 
 let W=0,H=0,D=1,N=0,t=0,last=0,shape='logo',al=1,mx=0,my=0,entered=false,vis=true,ready=false;
