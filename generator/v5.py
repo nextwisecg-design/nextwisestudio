@@ -49,7 +49,7 @@ CSS = v4.CSS + r'''
 /* introul, puțin schimbat */
 .i5 .rx::before{content:"";position:absolute;inset:13%;border-radius:50%;background:conic-gradient(from 0deg,rgba(142,123,255,.34),transparent 24%);-webkit-mask:radial-gradient(circle closest-side,transparent 65%,#000 66%);mask:radial-gradient(circle closest-side,transparent 65%,#000 66%);animation:rot 3.6s linear infinite}
 .i5 .a{stroke:hsl(var(--h) 92% 68%)}
-.i5 .rcore span{font-variant-numeric:tabular-nums}
+.i5 .rcore{opacity:.8}
 .hero{position:relative}
 @media (hover:hover) and (pointer:fine) and (min-width:1001px){.hero::after{content:"%%CAP%%";position:absolute;right:var(--pad);bottom:30px;font-family:'Geist Mono',monospace;font-size:13px;color:var(--faint);opacity:0;transition:opacity 1s 2s}.entered .hero::after{opacity:1}}
 .marq{display:none}
@@ -156,7 +156,6 @@ rep("setTimeout(()=>{try{enterBtn.focus({preventScroll:true})}catch(e){}},1900);
 
 EXTRA = v4.EXTRA.replace("if(!s||RM)return;", "if(!s||RM||s.classList.contains('legal'))return;").replace('setTimeout(st,34)', 'setTimeout(st,60)').replace('n+=3;', 'n+=2;').replace('setTimeout(ty,14)', 'setTimeout(ty,24)') + r'''
 // numărătoarea din nucleu: câte module au pornit
-const cnt=$('.rcore span');if(cnt&&!RM){const fin=cnt.textContent;cnt.textContent='0/6';for(let i=1;i<=6;i++)setTimeout(()=>{if(!B.classList.contains('entered'))cnt.textContent=i+'/6'},600+(i-1)*450+520);setTimeout(()=>{cnt.textContent=fin},3700)}
 // planeta se rotește cu mouse-ul
 const heroEl=$('.hero');let drag=false,lx=0;
 if(heroEl&&!RM){heroEl.addEventListener('pointerdown',e=>{if(e.pointerType==='touch'||e.target.closest('a,button'))return;drag=true;lx=e.clientX;heroEl.style.cursor='grabbing'});

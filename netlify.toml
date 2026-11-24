@@ -4,12 +4,7 @@
   publish = "site"
   command = "echo 'site static, fără build'"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+# Headerele de securitate (inclusiv Content-Security-Policy) sunt în site/_headers, scris de generator/prod.py.
 
 # Adresele site-ului vechi duc la pagina nouă, în limba potrivită
 [[redirects]]
@@ -37,8 +32,4 @@
   to = "/"
   status = 302
 
-# Orice altă adresă necunoscută arată prima pagină
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Adresele care nu există primesc site/404.html, cu cod 404.
