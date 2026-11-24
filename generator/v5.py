@@ -65,9 +65,9 @@ CSS = v4.CSS + r'''
 .prod,.cta-box{animation-duration:24s}
 .pb-live.on i{animation-duration:3.4s}
 .gtip{position:fixed;left:0;top:0;z-index:6;width:250px;padding:12px 14px;border-radius:12px;background:#12131B;border:1px solid var(--line2);pointer-events:none;opacity:0;transition:opacity .18s var(--ease);display:grid;gap:3px}
-.gtip.on{opacity:1}.gtip.l{margin-left:-250px}
+.gtip.on{opacity:1}
 .gtip b{font-size:15px;font-weight:600}.gtip span{font-size:14px;line-height:1.4;color:var(--text2)}
-@media (prefers-reduced-motion:reduce){.i5 .rx::before{display:none}}
+@media (prefers-reduced-motion:reduce){.i5 .rx::before{display:none}.entered #intro.i4{transition:none}}
 '''
 
 # ── FX: motorul de particule din v2, cu planeta îmbogățită
@@ -125,7 +125,7 @@ function globe(g,cy_,sy_,cx_,sx_){const m=W<760;
   c.fillStyle='#fff';c.beginPath();c.arc(p[0],p[1],on?4.6:3.4,0,6.2832);c.fill();c.strokeStyle='#8E7BFF';c.lineWidth=on?1.6:1;c.beginPath();c.arc(p[0],p[1],on?15:8+1.5*Math.sin(t*.7+i),0,6.2832);c.stroke();
   c.fillStyle=on?'#fff':'#EDEEF5';if(flip){c.textAlign='center';c.fillText(DEP[i][0],Math.max(tw/2+6,Math.min(W-tw/2-6,p[0])),p[1]-18)}else{c.textAlign=sd>0?'left':'right';c.fillText(DEP[i][0],ex+sd*(m?14:24),ey+5)}});
  if(tip){if(best!==hov){hov=best;if(hov>=0){tip.firstChild.textContent=DEP[hov][0];tip.lastChild.textContent=DEP[hov][1]}tip.classList.toggle('on',hov>=0)}
-  if(hov>=0){const left=bx>=g.cx;tip.classList.toggle('l',left);tip.style.transform='translate('+Math.round(bx+(left?-24:24))+'px,'+Math.round(by+22)+'px)';if(!RM)rotX-=g.spin/60}}
+  if(hov>=0){const left=bx>=g.cx;tip.classList.toggle('l',left);tip.style.transform='translate('+Math.max(8,Math.min(innerWidth-258,Math.round(left?bx-274:bx+24)))+'px,'+Math.round(by+22)+'px)';if(!RM)rotX-=g.spin/60}}
  c.globalAlpha=1}
 '''.replace("%%DEP%%", _json.dumps([list(d) for d in DEP], ensure_ascii=False)).replace("%%TOOLS%%", _json.dumps(TOOLS, ensure_ascii=False))
 ZZ = ''''''
@@ -204,6 +204,7 @@ WIDE = """
  .prod .l{padding:22px 44px 20px}.prod .r{padding:14px 44px}.mock{max-width:226px}
  .prod .lead{margin-top:8px}.price{margin-top:10px}.cta2{margin-top:12px}
  .pdet{gap:10px;padding:12px 44px 14px}.how span{font-size:14px}
+ #site-uri{padding-top:82px}
 }
 """
 CSS = CSS + L.CSS + WIDE

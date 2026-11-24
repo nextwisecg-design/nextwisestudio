@@ -109,7 +109,8 @@ LEGAL = [
     ]),
     ("cookies", "Politica de cookie-uri", [
         ("Ce folosim", ["Site-ul nu folosește cookie-uri de analiză sau de publicitate și nu încarcă instrumente de urmărire de la terți.",
-                        "Fonturile și animațiile sunt încărcate de pe site, nu de la terți."]),
+                        "Fonturile și animațiile sunt încărcate de pe site, nu de la terți.",
+                        "Site-ul ține minte, doar pe durata vizitei și doar în browserul tău, că ai trecut de animația de început. Nu este un cookie și nu ajunge la noi."]),
         ("Dacă se schimbă ceva", ["Dacă vom adăuga statistici de trafic, hărți, video sau alte servicii care pun cookie-uri, îți vom cere acordul înainte, printr-un banner în care refuzul e la fel de ușor ca acceptul, și vom lista aici fiecare cookie."]),
         ("Linkuri externe", ["Când apeși pe un link către alt serviciu (de exemplu WhatsApp sau pagina de plată), se aplică politica acelui serviciu."]),
     ]),

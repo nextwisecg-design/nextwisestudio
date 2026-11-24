@@ -75,6 +75,8 @@ D["Intră în site"] = "Enter the site"
 # texte adăugate după check-ul din 24.11.2026
 D.update({
     "dimineața": "morning", "la prânz": "midday", "seara": "evening",
+    "Site-ul ține minte, doar pe durata vizitei și doar în browserul tău, că ai trecut de animația de început. Nu este un cookie și nu ajunge la noi.":
+        "The website remembers, only for the duration of your visit and only in your browser, that you have passed the opening animation. It is not a cookie and it does not reach us.",
     "funcții serverless": "serverless functions",
     "cont de membru, cu confirmare pe email": "member account, with email confirmation",
     "Serviciile noastre se adresează firmelor și altor profesioniști.": "Our services are meant for companies and other professionals.",

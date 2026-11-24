@@ -456,7 +456,7 @@ def page(title, css, intro, js, head=None, prod=None, ways=None, footer=None, ex
 <title>{title}</title>
 <meta name="description" content="NEXTWISE construiește sisteme AI și site-uri pentru firme din România.">
 <style>{css}</style>
-<noscript><style>#intro{{display:none}}.site{{opacity:1;pointer-events:auto}}body:not(.entered){{overflow:auto;height:auto}}.rv,.w>span,.hero .sub,.hero .cta{{opacity:1;transform:none}}</style></noscript>
+<noscript><style>#intro{{display:none!important}}.site{{opacity:1;pointer-events:auto}}body:not(.entered){{overflow:auto;height:auto}}.rv,.w>span,.hero .sub,.hero .cta{{opacity:1;transform:none}}</style></noscript>
 </head>
 <body>
 <canvas id="fx" aria-hidden="true"></canvas>
