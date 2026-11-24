@@ -30,7 +30,7 @@ def rep(s, a, b, n=1):
 old_title = re.search(r"<title>(.*?)</title>", h).group(1)
 head = (f'<title>{TITLE["ro"]}</title>\n<link rel="canonical" href="%%CANON%%">\n'
         f'<link rel="alternate" hreflang="ro" href="{SITE}/">\n<link rel="alternate" hreflang="en" href="{SITE}/en/">\n<link rel="alternate" hreflang="x-default" href="{SITE}/">\n'
-        '<link rel="icon" href="/favicon.ico">\n<meta name="theme-color" content="#090A11">\n'
+        '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n<link rel="icon" href="/favicon.ico" sizes="any">\n<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n<meta name="theme-color" content="#090A11">\n'
         f'<meta property="og:type" content="website">\n<meta property="og:site_name" content="NEXTWISE">\n<meta property="og:title" content="{TITLE["ro"]}">\n'
         f'<meta property="og:description" content="{DESC["ro"]}">\n<meta property="og:url" content="%%CANON%%">')
 h = rep(h, f"<title>{old_title}</title>", head)
@@ -109,7 +109,6 @@ if OUT.exists():
 (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
                                  f'<url><loc>{SITE}/</loc><xhtml:link rel="alternate" hreflang="ro" href="{SITE}/"/><xhtml:link rel="alternate" hreflang="en" href="{SITE}/en/"/></url>\n'
                                  f'<url><loc>{SITE}/en/</loc><xhtml:link rel="alternate" hreflang="ro" href="{SITE}/"/><xhtml:link rel="alternate" hreflang="en" href="{SITE}/en/"/></url>\n</urlset>\n')
-fav = ROOT.parent / "legacy" / "public" / "favicon.ico"
-if fav.exists():
-    shutil.copy(fav, OUT / "favicon.ico")
+for f in ("favicon.svg", "favicon.ico", "apple-touch-icon.png"):
+    shutil.copy(ROOT / "static" / f, OUT / f)
 print("out/index.html", len(ro) // 1024, "KB · out/en/index.html", len(en) // 1024, "KB ·", sorted(p.name for p in OUT.rglob("*") if p.is_file()))

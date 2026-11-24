@@ -168,6 +168,45 @@ CSS = CSS.replace("%%CAP%%", f"{len(DEP)} departamente, un singur sistem. Trage 
 MOCK = '<div><div class="mock" aria-hidden="true"><div class="bar"><i></i><i></i><i></i></div><div class="pg"><div class="b b1"></div><div class="b b2"></div><div class="b b3"></div><div class="b b4"></div><div class="b b5"></div><div class="g3"><div class="b"></div><div class="b"></div><div class="b"></div></div></div></div><p class="mock-cap">Schiță de principiu. Macheta reală se face cu datele firmei tale.</p></div>'
 v2.SHOW_DATES = False
 v2.PORTFOLIO = L.PORTFOLIO5
-CSS = CSS + L.CSS
+# ── ecrane mari: pagina mai lată; cardul „Site-uri” încape într-un ecran (doar desktop, telefonul rămâne cum era)
+WIDE = """
+.wrap{max-width:max(1280px,min(1640px,86vw))}
+@media (min-width:1500px){
+ .hero .txt{max-width:780px}.hero h1{font-size:clamp(104px,6.1vw,124px)}
+ .hero .sub{font-size:22px;max-width:42ch}
+}
+@media (min-width:1001px){
+ .prod .inn{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+ .prod .l{padding:38px 48px 34px}.prod .r{padding:28px 48px}
+ .prod .h2{font-size:clamp(34px,3.1vw,54px);max-width:16ch}
+ .prod .lead{font-size:17px;margin-top:14px;max-width:52ch}
+ .price{margin-top:20px;gap:14px}.price b{font-size:clamp(40px,3.7vw,62px)}
+ .prod .vat{margin-top:8px}.cta2{margin-top:20px}
+ .mock{max-width:380px}.mock .pg{padding:18px;gap:10px}.mock-cap{margin-top:12px}
+ .pdet{grid-template-columns:1fr;gap:22px;padding:24px 48px 30px}
+ .pdet h3{margin-bottom:10px}
+ .pdet .pts{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 32px}
+ .how{grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+ .how li{gap:12px}.how span{font-size:15px;line-height:1.4;display:block;margin-top:2px}
+}
+@media (min-width:1500px){.mock{max-width:430px}}
+@media (min-width:1001px) and (max-width:1499px){
+ .pdet .pts{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .how{gap:20px}.how b{font-size:16px;line-height:1.3}
+}
+@media (min-width:1001px) and (max-height:900px){
+ .prod .l{padding:28px 44px 26px}.prod .r{padding:18px 44px}
+ .prod .h2{font-size:clamp(32px,2.9vw,42px)}.prod .lead{font-size:16px;margin-top:10px}
+ .price{margin-top:14px}.price b{font-size:44px}.cta2{margin-top:14px}
+ .mock{max-width:250px}.mock .pg{padding:12px;gap:7px}.mock-cap{margin-top:8px;font-size:13px}
+ .pdet{gap:12px;padding:14px 44px 18px}.pdet h3{margin-bottom:8px}.pdet .pts{gap:5px 28px}.how span{font-size:14.5px}
+}
+@media (min-width:1001px) and (max-height:800px){
+ .prod .l{padding:22px 44px 20px}.prod .r{padding:14px 44px}.mock{max-width:226px}
+ .prod .lead{margin-top:8px}.price{margin-top:10px}.cta2{margin-top:12px}
+ .pdet{gap:10px;padding:12px 44px 14px}.how span{font-size:14px}
+}
+"""
+CSS = CSS + L.CSS + WIDE
 build("v5", "NEXTWISE · Site nou · versiunea 5 · Reactor + planetă", INTRO, CSS, FX, EXTRA,
       prod=L.prod(v2.CHECK, MOCK), ways=L.WAYS, footer=L.FOOTER, extra=L.legal_sheets())
