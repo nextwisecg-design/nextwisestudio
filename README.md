@@ -17,7 +17,7 @@ cd generator
 npm install            # o singură dată, pentru fonturi
 python3 v5.py          # pagina de lucru, în română (v5.html)
 python3 prod.py        # out/index.html și out/en/index.html, cu titlu, meta și comutator de limbă
-cp out/index.html ../site/ && cp out/en/index.html ../site/en/
+rm -rf ../site && cp -r out ../site   # tot folderul, inclusiv _headers și 404.html
 ```
 
 | Ce vrei să schimbi | Unde |
@@ -33,6 +33,7 @@ cp out/index.html ../site/ && cp out/en/index.html ../site/en/
 ## De știut
 
 - Pagina nu folosește cookie-uri și nu încarcă nimic de la terți.
-- Textele legale nu au fost verificate de un avocat.
-- Pictogramele ANPC din subsol sunt tăiate dintr-o captură. Când aveți fișierele originale de pe anpc.ro, înlocuiți-le în `anpc_b64.py`.
+- Pictograma ANPC (SAL) din subsol e în `anpc_b64.py`.
+- Headerele de securitate sunt în `site/_headers`. `prod.py` le rescrie la fiecare build, cu amprenta scriptului din pagină; dacă publici o pagină fără `_headers` potrivit, scriptul ei e blocat de browser.
+- Imaginile de previzualizare (`og-ro.jpg`, `og-en.jpg`) se refac cu `node og.mjs`, după `python3 prod.py`, apoi încă un `python3 prod.py`.
 - Introul apare o singură dată pe sesiune; la schimbarea limbii se intră direct în site.

@@ -50,7 +50,7 @@ FOOTER = f'''<footer class="lg"><div class="wrap">
   <div class="f-top">
     <div class="f-co"><b>{CO["name"]}</b><span>Nr. Reg. Com.: {CO["reg"]}</span><span>CUI: {CO["cui"]}</span><span>Email: {CO["email"]}</span><span>Telefon: {CO["phone"]}</span></div>
     <nav class="f-links" aria-label="Informații legale"><button type="button" data-open="firma">Datele firmei</button><button type="button" data-open="termeni">Termeni și condiții</button><button type="button" data-open="confidentialitate">Politica de confidențialitate</button><button type="button" data-open="cookies">Politica de cookie-uri</button><a href="https://anpc.ro/" target="_blank" rel="noopener">ANPC</a></nav>
-    <div class="anpc"><a href="{SAL_URL}" target="_blank" rel="noopener"><img src="data:image/png;base64,{_A.SAL}" width="250" height="62" alt="ANPC, Soluționarea alternativă a litigiilor"></a><a href="{SOL_URL}" target="_blank" rel="noopener"><img src="data:image/png;base64,{_A.SOL}" width="250" height="62" alt="Soluționarea online a litigiilor"></a></div>
+    <div class="anpc"><a href="{SAL_URL}" target="_blank" rel="noopener"><img src="data:image/png;base64,{_A.SAL}" width="250" height="62" alt="ANPC, Soluționarea alternativă a litigiilor"></a></div>
   </div>
   <div class="f-bot"><span>© 2026 {CO["name"]}</span><span>NEXTWISE, AI Systems Studio</span></div>
 </div></footer>'''
@@ -62,15 +62,17 @@ LEGAL = [
     ("termeni", "Termeni și condiții", [
         ("1. Cine suntem", [f"Site-ul nextwise.studio este administrat de {ID}. Ne poți scrie la {CO['email']} sau ne poți suna la {CO['phone']}."]),
         ("2. Ce este acest site", ["Site-ul prezintă serviciile NEXTWISE: sisteme cu agenți AI, automatizări și site-uri de prezentare.",
+                                   "Serviciile noastre se adresează firmelor și altor profesioniști.",
                                    "Informațiile de pe site sunt de prezentare. Nu sunt o ofertă fermă. Un serviciu se contractează doar pe baza unei oferte și a unui contract scris sau a unei comenzi confirmate de noi."]),
         ("3. Serviciile", ["<b>Sisteme AI și automatizări:</b> se stabilesc după o discuție, pe bază de ofertă și contract. Termenele, prețul și ce se livrează sunt cele din contract.",
                            "<b>Site de prezentare:</b> îți arătăm o machetă făcută pentru firma ta, fără nicio obligație. Dacă o vrei, plătești, completezi un formular cu textele și pozele tale, iar noi publicăm site-ul. Găzduirea și mentenanța se plătesc lunar.",
-                           "Abonamentul de mentenanță are o durată minimă între 6 și 12 luni, stabilită la comandă."]),
+                           "Abonamentul de mentenanță are o durată minimă de 6 până la 12 luni. Durata exactă este scrisă în ofertă, înainte să plătești."]),
         ("4. Prețuri și plată", ["Prețurile de pe site sunt în euro, includ TVA și sunt prețuri de pornire.",
                                  "Plata se face cu cardul, printr-un procesator de plăți, sau prin transfer bancar, pe baza facturii.",
                                  "Prețul final este cel din ofertă sau din pagina de plată, afișat înainte să plătești."]),
         ("5. Dacă ești consumator", ["Dacă ești persoană fizică și cumperi în afara activității tale profesionale, ai drepturile din OUG nr. 34/2014, inclusiv dreptul de a te retrage din contract în 14 zile, fără să dai un motiv, în condițiile și cu excepțiile din lege.",
-                                     f"Cererea de retragere o trimiți la {CO['email']}, iar noi îți confirmăm primirea pe email."]),
+                                     f"Cererea de retragere o trimiți la {CO['email']}, iar noi îți confirmăm primirea pe email.",
+                                     "Dacă ne ceri să începem lucrul înainte să treacă cele 14 zile și apoi te retragi, plătești partea de serviciu făcută până atunci, în condițiile legii."]),
         ("6. Drepturi de autor", ["Textele, grafica, animațiile și codul site-ului aparțin NEXTWISE sau sunt folosite cu acordul titularilor. Nu le poți copia sau refolosi fără acordul nostru scris.",
                                   "Numele și siglele clienților din portofoliu aparțin acestora și apar cu acordul lor."]),
         ("7. Răspundere", ["Ne străduim ca informațiile de pe site să fie corecte și la zi. Pot apărea erori, pe care le corectăm când le aflăm.",
@@ -78,24 +80,28 @@ LEGAL = [
         ("8. Reclamații și litigii", [f"Dacă ai o nemulțumire, scrie-ne la {CO['email']}. Îți răspundem în cel mult 30 de zile.",
                                       f'Consumatorii se pot adresa Autorității Naționale pentru Protecția Consumatorilor (<a href="https://anpc.ro/" target="_blank" rel="noopener">anpc.ro</a>) și pot folosi soluționarea alternativă a litigiilor (<a href="{SAL_URL}" target="_blank" rel="noopener">reclamatiisal.anpc.ro</a>).',
                                       "Acestor termeni li se aplică legea română. Litigiile care nu se rezolvă pe cale amiabilă se judecă de instanțele competente din România."]),
-        ("9. Modificări", ["Putem actualiza acești termeni. Versiunea în vigoare este cea publicată pe site, cu data ultimei modificări."]),
+        ("9. Modificări", ["Putem actualiza acești termeni. Versiunea în vigoare este cea publicată pe site, cu data ultimei modificări.",
+                           "Dacă versiunea în engleză diferă de cea în română, se aplică versiunea în română."]),
     ]),
     ("confidentialitate", "Politica de confidențialitate", [
         ("1. Cine răspunde de datele tale", [f"Operatorul datelor este {ID}. Pentru orice întrebare despre datele tale, scrie-ne la {CO['email']}."]),
         ("2. Ce date prelucrăm", ["<b>Când ne contactezi</b> (email, telefon, WhatsApp): numele, numărul de telefon, adresa de email, firma și ce ne scrii.",
+                                  "<b>Când te contactăm noi:</b> datele de contact ale firmei, luate din surse publice (profilul firmei pe Google, site-ul firmei, registre publice): denumirea, telefonul, emailul și numele persoanei de contact, dacă este public.",
                                   "<b>Când devii client:</b> datele de facturare și datele persoanei de contact.",
                                   "<b>Date tehnice:</b> furnizorul de găzduire păstrează jurnale tehnice (adresa IP, tipul de browser, data accesării), necesare pentru funcționarea și securitatea site-ului.",
-                                  "Site-ul nu are formulare și nu îți cere să îți faci cont."]),
-        ("3. De ce le prelucrăm și în ce temei", ["<ul><li>ca să îți răspundem și să îți facem o ofertă: demersuri la cererea ta, înainte de un contract (art. 6 alin. 1 lit. b din GDPR);</li><li>ca să încheiem și să derulăm contractul: executarea contractului (lit. b);</li><li>facturare și contabilitate: obligație legală (lit. c);</li><li>securitatea site-ului: interes legitim (lit. f).</li></ul>",
+                                  "Site-ul nu are formulare și nu îți cere să îți faci cont.",
+                                  "Nu ești obligat să ne dai date. Fără datele de contact nu îți putem răspunde."]),
+        ("3. De ce le prelucrăm și în ce temei", ["<ul><li>ca să îți răspundem și să îți facem o ofertă: demersuri la cererea ta, înainte de un contract (art. 6 alin. 1 lit. b din GDPR);</li><li>ca să încheiem și să derulăm contractul: executarea contractului (lit. b);</li><li>ca să prezentăm serviciile noastre firmelor care ar putea avea nevoie de ele: interes legitim (lit. f); te poți opune oricând, iar noi ștergem datele;</li><li>facturare și contabilitate: obligație legală (lit. c);</li><li>securitatea site-ului: interes legitim (lit. f).</li></ul>",
                                                    "Nu îți trimitem mesaje comerciale fără acordul tău."]),
-        ("4. Cui le transmitem", ["Folosim furnizori care prelucrează date în numele nostru: găzduirea site-ului (Netlify), email, procesatorul de plăți și programul de facturare. Datele ajung la autorități doar când legea ne obligă.",
+        ("4. Cui le transmitem", ["Folosim furnizori care prelucrează date în numele nostru: găzduirea site-ului (Netlify), email, WhatsApp (când ne scrii acolo), servicii de inteligență artificială care ne ajută să sortăm și să redactăm mesaje, procesatorul de plăți și programul de facturare. Datele ajung la autorități doar când legea ne obligă.",
                                   "Unii furnizori sunt în afara Spațiului Economic European. În aceste cazuri transferul se face cu garanțiile cerute de GDPR (decizie de adecvare sau clauze contractuale standard)."]),
-        ("5. Cât timp le păstrăm", ["Mesajele care nu duc la un contract le păstrăm cel mult 12 luni. Datele din contracte și facturi le păstrăm pe durata cerută de legislația financiar-contabilă."]),
+        ("5. Cât timp le păstrăm", ["Mesajele care nu duc la un contract le păstrăm cel mult 12 luni. Datele firmelor pe care le contactăm noi le păstrăm cel mult 12 luni de la ultimul contact sau până ne ceri să le ștergem. Datele din contracte și facturi le păstrăm pe durata cerută de legislația financiar-contabilă."]),
         ("6. Drepturile tale", ["Ai dreptul de acces, de rectificare, de ștergere, de restricționare, de portabilitate și de opoziție, iar acolo unde prelucrarea se bazează pe acord, îl poți retrage oricând.",
                                 f"Ne scrii la {CO['email']} și îți răspundem în cel mult o lună.",
                                 'Dacă ești nemulțumit, poți face plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (<a href="https://www.dataprotection.ro/" target="_blank" rel="noopener">dataprotection.ro</a>).']),
         ("7. Decizii automate", ["Nu luăm decizii cu efecte juridice asupra ta doar prin mijloace automate și nu facem profilare."]),
-        ("8. Modificări", ["Dacă schimbăm această politică, publicăm versiunea nouă pe site, cu data ultimei modificări."]),
+        ("8. Modificări", ["Dacă schimbăm această politică, publicăm versiunea nouă pe site, cu data ultimei modificări.",
+                         "Dacă versiunea în engleză diferă de cea în română, se aplică versiunea în română."]),
     ]),
     ("firma", "Datele firmei", [
         ("Identificare", [f"Denumire: {CO['name']}", f"Sediu social: {CO['seat']}", f"Nr. Reg. Com.: {CO['reg']}", f"CUI: {CO['cui']}", f"Capital social: {CAPITAL}"]),
@@ -182,14 +188,15 @@ footer.lg .wrap{display:block}
 # netlify/database/migrations, src/agents.ts). Fără link: e sistem intern. Fără nume de variabile, adrese sau chei.
 from v2data import PORTFOLIO as _P
 
-DAY = [("06:07", "SDR România", "aduce lead-urile noi pentru vânzări"),
-       ("07:14", "Social Media Manager", "scrie postările de mâine, de aprobat"),
-       ("08:27", "Executive Assistant", "sortează emailurile și pregătește răspunsuri"),
-       ("09:35", "VP Sales", "verifică lead-urile înainte de apeluri"),
-       ("11:52", "Operations Associate", "face task-urile aprobate"),
-       ("19:40", "Software Engineer", "publică reparațiile aprobate"),
-       ("22:00", "Chief of Staff", "scrie raportul de seară")]
-_day = "".join(f'<li style="--i:{i}"><time>{a}</time><b>{esc(b)}</b><span>{esc(c)}</span></li>' for i, (a, b, c) in enumerate(DAY))
+# fără ore exacte și fără detalii de conturi: sunt informații din interior (check 24.11.2026)
+DAY = [("dimineața", "SDR România", "aduce lead-urile noi pentru vânzări"),
+       ("", "Social Media Manager", "scrie postările de mâine, de aprobat"),
+       ("", "Executive Assistant", "sortează emailurile și pregătește răspunsuri"),
+       ("", "VP Sales", "verifică lead-urile înainte de apeluri"),
+       ("la prânz", "Operations Associate", "face task-urile aprobate"),
+       ("seara", "Software Engineer", "publică reparațiile aprobate"),
+       ("", "Chief of Staff", "scrie raportul de seară")]
+_day = "".join(f'<li style="--i:{i}"><i class="t">{a}</i><b>{esc(b)}</b><span>{esc(c)}</span></li>' for i, (a, b, c) in enumerate(DAY))
 
 HQ = dict(
     slug="nextwise-hq", hue=258, name="NEXTWISE HQ", kind="Tablou de conducere cu agenți AI",
@@ -216,7 +223,6 @@ HQ = dict(
           ("Sursă", "Notion, sincronizat din oră în oră; un rând se rescrie doar dacă s-a schimbat"),
           ("Scriere", "butoanele scriu întâi în Notion, apoi în baza site-ului"),
           ("Agenți", "15 agenți Claude activi, pe 4 echipe, fiecare cu program și jurnal"),
-          ("Conturi", "Netlify Identity, doar pe invitație; roluri pentru conducere și vânzări"),
           ("Imagini", "postările se desenează pe server, cu Satori și Resvg"),
           ("Rapoarte", "PDF generat cu pdf-lib, trimis pe email dimineața"),
           ("Publicare", "Buffer API, doar după aprobarea unui om"),
@@ -230,10 +236,10 @@ PORTFOLIO5 = [_P[0], HQ, _P[1], _P[2]]
 CSS += r"""
 @media (min-width:701px){.pb-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .day{list-style:none;font-family:'Geist Mono',monospace;font-size:13.5px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.day li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:2px 14px;padding:11px 16px;border-top:1px solid var(--line);position:relative}
+.day li{display:grid;grid-template-columns:78px minmax(0,1fr);gap:2px 14px;padding:11px 16px;border-top:1px solid var(--line);position:relative}
 .day li:first-child{border-top:0}
 .day li::before{content:"";position:absolute;inset:0;background:color-mix(in srgb,var(--pb-c) 18%,transparent);opacity:0;animation:dayrun 21s linear infinite;animation-delay:calc(var(--i)*3s)}
-.day time{grid-row:1/3;color:color-mix(in srgb,var(--pb-c) 72%,#fff);position:relative}
+.day .t{grid-row:1/3;font-style:normal;color:color-mix(in srgb,var(--pb-c) 72%,#fff);position:relative}
 .day b{font-family:'Geist',sans-serif;font-size:15px;font-weight:600;color:var(--text);position:relative}
 .day span{color:var(--text2);position:relative}
 @keyframes dayrun{0%,13%{opacity:1}15%,100%{opacity:0}}
