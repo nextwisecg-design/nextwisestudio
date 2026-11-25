@@ -209,4 +209,4 @@ WIDE = """
 """
 CSS = CSS + L.CSS + WIDE
 build("v5", "NEXTWISE · Site nou · versiunea 5 · Reactor + planetă", INTRO, CSS, FX, EXTRA,
-      prod=L.prod(v2.CHECK, MOCK), ways=L.WAYS, footer=L.FOOTER, extra=L.legal_sheets())
+      prod=L.prod(v2.CHECK, MOCK), ways=L.WAYS, footer=L.FOOTER, extra=L.legal_sheets() + L.sites_sheets())

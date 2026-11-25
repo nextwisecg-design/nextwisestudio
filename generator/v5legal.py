@@ -36,10 +36,14 @@ def prod(check, mock_html):
       <p class="lead">Pentru firme mici care nu au site sau au unul care nu le mai reprezintă. Vezi macheta făcută pentru firma ta înainte să plătești ceva.</p>
       <p class="price"><b>de la 200 €</b><span>mentenanță de la 30 € pe lună</span></p>
       <p class="vat">Prețurile includ TVA.</p>
-      <p class="cta2"><a class="btn" href="#contact">Cere macheta</a><button class="btn soft" type="button" data-open="cosmina-petrescu">Vezi un site făcut de noi</button></p></div>
+      <p class="cta2"><a class="btn" href="#contact">Cere macheta</a><a class="btn soft" href="#site-uri-facute">Vezi site-uri făcute de noi</a></p></div>
     <div class="r">{mock_html}</div>
     <div class="pdet"><div><h3>Ce primești</h3><ul class="pts">{gets}</ul></div><div><h3>Cum merge</h3><ol class="how">{how}</ol></div></div>
-  </div></div>'''
+  </div></div>
+  <div class="sites-pf" id="site-uri-facute">
+    <div class="s-head rv"><h2 class="h2">Site-uri făcute de noi.</h2><p>Doar site-uri, live, pe care le poți deschide. Sistemele cu agenți AI sunt mai jos, la <a href="#portofoliu">Portofoliu</a>.</p></div>
+    <div class="pb-grid">{sites_cards()}</div>
+  </div>'''
 
 
 WAYS = '''<div class="ways2">
@@ -233,10 +237,60 @@ HQ = dict(
                  outs=["Notion", "Buffer", "Email", "PDF"]),
     tech_extra=f'<h4>O zi obișnuită în HQ</h4><ol class="day">{_day}</ol>',
 )
-PORTFOLIO5 = [_P[0], HQ, _P[1], _P[2]]
+PORTFOLIO5 = [_P[0], HQ, _P[1]]  # sisteme; site-urile sunt în SITES, la secțiunea Site-uri
+
+# ── Portofoliul de site-uri (25.11.2026). Doar site-uri live, pe domeniul clientului.
+#    Conținutul e luat din ce se vede pe fiecare site (pagini, secțiuni, găzduire din headerele HTTP).
+PSIH = dict(
+    slug="psihflavium", hue=160, name="Flaviu Mihăiță", kind="Site de cabinet",
+    who="Cabinet de psihologie pentru copii și adulți, București", since="",
+    badge="Live", live=True, url="https://psihflavium.ro", domain="psihflavium.ro", bar="psihflavium.ro",
+    summary="Site pentru un cabinet de psihologie, construit în jurul unui test de un minut care îi arată părintelui de unde să înceapă.",
+    delivered=["Test de orientare de un minut, după care cabinetul te sună", "O pagină pentru fiecare serviciu",
+               "Blog cu resurse pentru părinți și pagină de recenzii", "Pagini legale și ANPC"],
+    stack=["Next.js", "Vercel"],
+    intro="Un părinte îngrijorat nu știe ce serviciu îi trebuie copilului. Site-ul îl duce întâi printr-un test scurt, iar apoi cabinetul ia legătura cu el.",
+    did=[("Test de orientare", "Câteva întrebări, un minut, apoi cabinetul ia legătura cu părintele."),
+         ("Servicii pe pagini separate", "Evaluare, terapie, logopedie, consiliere și grupuri, fiecare cu pagina ei."),
+         ("Încredere", "Povestea psihologului, recenziile părinților și un blog cu resurse.")],
+    spec=[("Cadru", "Next.js"), ("Găzduire", "Vercel, HTTPS"),
+          ("Pagini", "servicii, test, blog, recenzii, contact"),
+          ("Legal", "confidențialitate, termeni, cookie-uri, ANPC")],
+    diagram=dict(ins=["Părinte"], core="Next.js, Vercel", store="Test", outs=["Cabinetul"]),
+)
+MACOVEI = dict(
+    slug="marius-macovei", hue=44, name="Marius Macovei", kind="Platformă de cursuri",
+    who="Cursuri de acupunctură și medicină tradițională chineză și japoneză", since="",
+    badge="Live", live=True, url="https://www.mariusmacovei.ro", domain="mariusmacovei.ro", bar="mariusmacovei.ro",
+    summary="Platformă pentru cursuri fizice de acupunctură, cu un chestionar de un minut care recomandă cursul potrivit și rezervare online.",
+    delivered=["Chestionar care recomandă cursul potrivit", "O pagină pentru fiecare curs, plus un pachet",
+               "Programare la curs și cont de cursant", "Pagini legale, de livrare și de anulare"],
+    stack=["Next.js", "Vercel"],
+    intro="Un terapeut care vrea să învețe acupunctură nu știe cu care din cele șase cursuri să înceapă. Site-ul îi recomandă unul într-un minut, apoi îl lasă să rezerve.",
+    did=[("Chestionar", "Câteva întrebări și o recomandare de curs, în loc de o listă din care alegi pe ghicite."),
+         ("Cursuri", "Șase cursuri, fiecare cu pagina lui, plus un pachet."),
+         ("Rezervare", "Programare la curs și cont pentru cursant.")],
+    spec=[("Cadru", "Next.js"), ("Găzduire", "Vercel, HTTPS"),
+          ("Cursant", "cont, programare, politici de livrare și de anulare"),
+          ("Cookie-uri", "banner cu alegere: doar strict necesare sau toate")],
+    diagram=dict(ins=["Cursant"], core="Next.js, Vercel", store="Chestionar", outs=["Rezervare", "Cont"]),
+)
+SITES = [MACOVEI, PSIH, _P[2]]
+
+
+def sites_cards():
+    import v2
+    return "".join(v2.card(p) for p in SITES)
+
+
+def sites_sheets():
+    import v2
+    return "".join(v2.sheet(p) for p in SITES)
 
 CSS += r"""
 @media (min-width:701px){.pb-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1101px){.pb-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.sites-pf{margin-top:clamp(64px,9vw,120px);scroll-margin-top:100px}.sites-pf .s-head a{color:var(--text);text-decoration:underline;text-underline-offset:3px}
 .day{list-style:none;font-family:'Geist Mono',monospace;font-size:13.5px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .day li{display:grid;grid-template-columns:78px minmax(0,1fr);gap:2px 14px;padding:11px 16px;border-top:1px solid var(--line);position:relative}
 .day li:first-child{border-top:0}

@@ -73,6 +73,62 @@ D.update({"Datele firmei": "Company details", "Identificare": "Identification", 
 D[TITLE["ro"]] = TITLE["en"]
 D[DESC["ro"]] = DESC["en"]
 D["Intră în site"] = "Enter the site"
+# portofoliul de site-uri (25.11.2026)
+D.update({
+    "Vezi site-uri făcute de noi": "See websites we made",
+    "Site-uri făcute de noi.": "Websites we made.",
+    "Doar site-uri, live, pe care le poți deschide. Sistemele cu agenți AI sunt mai jos, la": "Only websites, live, that you can open. The systems with AI agents are further down, under",
+    "Sisteme construite și pentru cine.": "Systems we built and who for.",
+    "Deschide fișa tehnică de pe fiecare proiect ca să vezi ce e sub capotă. Site-urile de prezentare sunt mai sus, la":
+        "Open the technical sheet on each project to see what is under the hood. The presentation websites are further up, under",
+    "Site de cabinet": "Practice website",
+    "Cabinet de psihologie pentru copii și adulți, București": "Psychology practice for children and adults, Bucharest",
+    "Site pentru un cabinet de psihologie, construit în jurul unui test de un minut care îi arată părintelui de unde să înceapă.":
+        "A website for a psychology practice, built around a one-minute test that shows parents where to start.",
+    "Test de orientare de un minut, după care cabinetul te sună": "One-minute guidance test, after which the practice calls you",
+    "O pagină pentru fiecare serviciu": "One page for each service",
+    "Blog cu resurse pentru părinți și pagină de recenzii": "Blog with resources for parents and a reviews page",
+    "Pagini legale și ANPC": "Legal pages and consumer-protection notices",
+    "Un părinte îngrijorat nu știe ce serviciu îi trebuie copilului. Site-ul îl duce întâi printr-un test scurt, iar apoi cabinetul ia legătura cu el.":
+        "A worried parent does not know which service their child needs. The website first takes them through a short test, and then the practice gets in touch.",
+    "Test de orientare": "Guidance test",
+    "Câteva întrebări, un minut, apoi cabinetul ia legătura cu părintele.": "A few questions, one minute, then the practice contacts the parent.",
+    "Servicii pe pagini separate": "Services on separate pages",
+    "Evaluare, terapie, logopedie, consiliere și grupuri, fiecare cu pagina ei.": "Assessment, therapy, speech therapy, counselling and groups, each with its own page.",
+    "Încredere": "Trust",
+    "Povestea psihologului, recenziile părinților și un blog cu resurse.": "The psychologist's story, parents' reviews and a blog with resources.",
+    "Cadru": "Framework",
+    "Vercel, HTTPS": "Vercel, HTTPS",
+    "servicii, test, blog, recenzii, contact": "services, test, blog, reviews, contact",
+    "confidențialitate, termeni, cookie-uri, ANPC": "privacy, terms, cookies, consumer protection",
+    "Părinte": "Parent", "Test": "Test", "Cabinetul": "The practice",
+    "Platformă de cursuri": "Course platform",
+    "Cursuri de acupunctură și medicină tradițională chineză și japoneză": "Courses in acupuncture and traditional Chinese and Japanese medicine",
+    "Platformă pentru cursuri fizice de acupunctură, cu un chestionar de un minut care recomandă cursul potrivit și rezervare online.":
+        "A platform for in-person acupuncture courses, with a one-minute quiz that recommends the right course, and online booking.",
+    "Chestionar care recomandă cursul potrivit": "Quiz that recommends the right course",
+    "O pagină pentru fiecare curs, plus un pachet": "One page for each course, plus a bundle",
+    "Programare la curs și cont de cursant": "Course booking and a student account",
+    "Pagini legale, de livrare și de anulare": "Legal, delivery and cancellation pages",
+    "Un terapeut care vrea să învețe acupunctură nu știe cu care din cele șase cursuri să înceapă. Site-ul îi recomandă unul într-un minut, apoi îl lasă să rezerve.":
+        "A therapist who wants to learn acupuncture does not know which of the six courses to start with. The website recommends one in a minute, then lets them book.",
+    "Chestionar": "Quiz",
+    "Câteva întrebări și o recomandare de curs, în loc de o listă din care alegi pe ghicite.": "A few questions and a course recommendation, instead of a list you pick from by guessing.",
+    "Cursuri": "Courses",
+    "Șase cursuri, fiecare cu pagina lui, plus un pachet.": "Six courses, each with its own page, plus a bundle.",
+    "Rezervare": "Booking",
+    "Programare la curs și cont pentru cursant.": "Course booking and an account for the student.",
+    "Cursant": "Student",
+    "cont, programare, politici de livrare și de anulare": "account, booking, delivery and cancellation policies",
+    "Cookie-uri": "Cookies",
+    "banner cu alegere: doar strict necesare sau toate": "banner with a choice: strictly necessary only, or all",
+    "Cont": "Account",
+    "Pagini": "Pages", "Legal": "Legal",
+    "Schema sistemului Marius Macovei": "System diagram for Marius Macovei",
+    "Schema sistemului Flaviu Mihăiță": "System diagram for Flaviu Mihăiță",
+    "Deschide mariusmacovei.ro": "Open mariusmacovei.ro",
+    "Deschide psihflavium.ro": "Open psihflavium.ro",
+})
 # texte adăugate după check-ul din 24.11.2026
 D.update({
     "dimineața": "morning", "la prânz": "midday", "seara": "evening",
@@ -98,6 +154,7 @@ D.update({
         "Messages that do not lead to a contract are kept for 12 months at most. Data about companies we contact ourselves is kept for 12 months at most from the last contact, or until you ask us to delete it. Data from contracts and invoices is kept for the period required by financial and accounting law.",
 })
 SAME = {"EN", "RO", "English", "Română", "website", "NEXTWISE", "agent", "%%OTHERLABEL%%", "%%OTHERNAME%%", "%%CANON%%", "#090A11", "%%OGLOCALE%%", "summary_large_image", "1200", "630", SITE + "/%%OGIMG%%"}
+SAME |= {"Flaviu Mihăiță", "Marius Macovei", "mariusmacovei.ro", "psihflavium.ro", "Vercel", "Next.js, Vercel"}
 
 e = h
 a, b = e.index("<h1>"), e.index("</h1>") + 5
@@ -121,7 +178,7 @@ en = fill(e, "en")
 # ── 3. verificare: nu mai rămâne română în pagina engleză (în afara numelor proprii și a adresei)
 parts, ns = i18n.nodes(en)
 left = sorted({t.strip() for _, t in ns if re.search(r"[ăâîșțĂÂÎȘȚ]", t)})
-allowed = ("Bacău", "Română")
+allowed = ("Bacău", "Română", "Flaviu Mihăiță")
 left = [t for t in left if not any(x in t for x in allowed)]
 if left:
     print("ROMÂNĂ RĂMASĂ:", left[:20]); sys.exit(1)
