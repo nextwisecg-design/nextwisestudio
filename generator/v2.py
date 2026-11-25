@@ -482,7 +482,7 @@ def page(title, css, intro, js, head=None, prod=None, ways=None, footer=None, ex
 </div></section>
 
 <section id="portofoliu" data-shape="scat"><div class="wrap">
-  <div class="s-head rv"><h2 class="h2">Ce am construit și pentru cine.</h2><p>Deschide fișa tehnică de pe fiecare proiect ca să vezi ce e sub capotă.</p></div>
+  <div class="s-head rv"><h2 class="h2">Sisteme construite și pentru cine.</h2><p>Deschide fișa tehnică de pe fiecare proiect ca să vezi ce e sub capotă. Site-urile de prezentare sunt mai sus, la <a href="#site-uri-facute">Site-uri</a>.</p></div>
   <div class="pb-grid">{"".join(card(p) for p in PORTFOLIO)}</div>
 </div></section>
 
