@@ -133,7 +133,7 @@ denis@nextwise.studio
 Phone
 NEXTWISE AI STUDIO S.R.L.
 Registered office: str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, Bacău county, Romania
-Trade Register no.: J04/662/2023
+Trade Register no.: J2023000662049
 Tax ID (CUI): 48024527
 Share capital: 200 lei
 Email: darius@nextwise.studio
@@ -299,9 +299,9 @@ Page
 HTML and CSS, no database
 every version is published whole, with no half-updated pages
 Legal information
-Last updated: 24 November 2026
+Last updated: 25 November 2026
 1. Who we are
-The website nextwise.studio is operated by NEXTWISE AI STUDIO S.R.L., with its registered office at str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, Bacău county, Romania, registered with the Trade Register under no. J04/662/2023, tax ID (CUI) 48024527, share capital 200 lei. You can write to us at darius@nextwise.studio or call us on +40 756 079 049.
+The website nextwise.studio is operated by NEXTWISE AI STUDIO S.R.L., with its registered office at str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, Bacău county, Romania, registered with the Trade Register under no. J2023000662049, tax ID (CUI) 48024527, share capital 200 lei. You can write to us at darius@nextwise.studio or call us on +40 756 079 049.
 2. What this website is
 The website presents NEXTWISE's services: systems with AI agents, automations and presentation websites.
 The information on the website is for presentation. It is not a binding offer. A service is contracted only on the basis of an offer and a written contract, or of an order confirmed by us.
@@ -334,7 +334,7 @@ These terms are governed by Romanian law. Disputes that are not settled amicably
 9. Changes
 We may update these terms. The version in force is the one published on the website, with the date of the last change.
 1. Who is responsible for your data
-The data controller is NEXTWISE AI STUDIO S.R.L., with its registered office at str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, Bacău county, Romania, registered with the Trade Register under no. J04/662/2023, tax ID (CUI) 48024527, share capital 200 lei. For any question about your data, write to us at darius@nextwise.studio.
+The data controller is NEXTWISE AI STUDIO S.R.L., with its registered office at str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, Bacău county, Romania, registered with the Trade Register under no. J2023000662049, tax ID (CUI) 48024527, share capital 200 lei. For any question about your data, write to us at darius@nextwise.studio.
 2. What data we process
 When you contact us
 (email, phone, WhatsApp): your name, phone number, email address, company and what you write to us.

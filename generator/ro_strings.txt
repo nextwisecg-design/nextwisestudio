@@ -133,7 +133,7 @@ denis@nextwise.studio
 Telefon
 NEXTWISE AI STUDIO S.R.L.
 Sediu social: str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, jud. Bacău
-Nr. Reg. Com.: J04/662/2023
+Nr. Reg. Com.: J2023000662049
 CUI: 48024527
 Capital social: 200 lei
 Email: darius@nextwise.studio
@@ -299,9 +299,9 @@ Pagină
 HTML și CSS, fără bază de date
 fiecare versiune se publică întreagă, fără pagini pe jumătate
 Informații legale
-Ultima actualizare: 24.11.2026
+Ultima actualizare: 25.11.2026
 1. Cine suntem
-Site-ul nextwise.studio este administrat de NEXTWISE AI STUDIO S.R.L., cu sediul social în str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, jud. Bacău, înregistrată la Registrul Comerțului sub nr. J04/662/2023, CUI 48024527, capital social 200 lei. Ne poți scrie la darius@nextwise.studio sau ne poți suna la 0756 079 049.
+Site-ul nextwise.studio este administrat de NEXTWISE AI STUDIO S.R.L., cu sediul social în str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, jud. Bacău, înregistrată la Registrul Comerțului sub nr. J2023000662049, CUI 48024527, capital social 200 lei. Ne poți scrie la darius@nextwise.studio sau ne poți suna la 0756 079 049.
 2. Ce este acest site
 Site-ul prezintă serviciile NEXTWISE: sisteme cu agenți AI, automatizări și site-uri de prezentare.
 Informațiile de pe site sunt de prezentare. Nu sunt o ofertă fermă. Un serviciu se contractează doar pe baza unei oferte și a unui contract scris sau a unei comenzi confirmate de noi.
@@ -334,7 +334,7 @@ Acestor termeni li se aplică legea română. Litigiile care nu se rezolvă pe c
 9. Modificări
 Putem actualiza acești termeni. Versiunea în vigoare este cea publicată pe site, cu data ultimei modificări.
 1. Cine răspunde de datele tale
-Operatorul datelor este NEXTWISE AI STUDIO S.R.L., cu sediul social în str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, jud. Bacău, înregistrată la Registrul Comerțului sub nr. J04/662/2023, CUI 48024527, capital social 200 lei. Pentru orice întrebare despre datele tale, scrie-ne la darius@nextwise.studio.
+Operatorul datelor este NEXTWISE AI STUDIO S.R.L., cu sediul social în str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, jud. Bacău, înregistrată la Registrul Comerțului sub nr. J2023000662049, CUI 48024527, capital social 200 lei. Pentru orice întrebare despre datele tale, scrie-ne la darius@nextwise.studio.
 2. Ce date prelucrăm
 Când ne contactezi
 (email, telefon, WhatsApp): numele, numărul de telefon, adresa de email, firma și ce ne scrii.

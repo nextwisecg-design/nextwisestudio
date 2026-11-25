@@ -2,14 +2,15 @@
 Surse pentru ce cere legea: Legea 365/2002 art. 5 și Legea 31/1990 art. 74 (datele firmei), GDPR art. 13,
 Legea 506/2004 art. 4 (cookie-uri), Ordinul ANPC 449/2022 modificat în 2026 (pictograma SAL; SOL nu mai e cerut
 din 20.07.2025), OUG 34/2014 (consumatori). Rezumat luat din articole din 2026, neverificat pe textele oficiale.
-Datele firmei: din cererea ONRC din 09.11.2026 (de verificat pe certificat). Capitalul social lipsește.
+Datele firmei: verificate pe certificatul de înregistrare seria B nr. 6130394, eliberat de ORCT Bacău la 25.11.2026
+(nr. de ordine în noul format ONRC: J2023000662049, EUID ROONRC.J2023000662049; vechiul J04/662/2023 nu se mai folosește).
 Textele sunt CIORNE: trebuie citite de un avocat înainte de publicare. Ce nu știm e marcat cu [paranteze]."""
 from common import esc
 
 CO = dict(
     name="NEXTWISE AI STUDIO S.R.L.",
     seat="str. Radu Negru nr. 4, sc. A, ap. 8, Bacău, jud. Bacău",
-    reg="J04/662/2023", cui="48024527", capital="200 lei",
+    reg="J2023000662049", euid="ROONRC.J2023000662049", cui="48024527", capital="200 lei",
     email="denis@nextwise.studio", phone="0756 079 049", phone_href="+40756079049",
 )
 SAL_URL = "https://reclamatiisal.anpc.ro/"
@@ -55,7 +56,7 @@ FOOTER = f'''<footer class="lg"><div class="wrap">
   <div class="f-bot"><span>© 2026 {CO["name"]}</span><span>NEXTWISE, AI Systems Studio</span></div>
 </div></footer>'''
 
-DRAFT = "Ultima actualizare: 24.11.2026"
+DRAFT = "Ultima actualizare: 25.11.2026"
 ID = f'{CO["name"]}, cu sediul social în {CO["seat"]}, înregistrată la Registrul Comerțului sub nr. {CO["reg"]}, CUI {CO["cui"]}, capital social {CAPITAL}'
 
 LEGAL = [
@@ -104,7 +105,7 @@ LEGAL = [
                          "Dacă versiunea în engleză diferă de cea în română, se aplică versiunea în română."]),
     ]),
     ("firma", "Datele firmei", [
-        ("Identificare", [f"Denumire: {CO['name']}", f"Sediu social: {CO['seat']}", f"Nr. Reg. Com.: {CO['reg']}", f"CUI: {CO['cui']}", f"Capital social: {CAPITAL}"]),
+        ("Identificare", [f"Denumire: {CO['name']}", f"Sediu social: {CO['seat']}", f"Nr. Reg. Com.: {CO['reg']}", f"EUID: {CO['euid']}", f"CUI: {CO['cui']}", f"Capital social: {CAPITAL}"]),
         ("Contact", [f"Email: {CO['email']}", f"Telefon: {CO['phone']}"]),
     ]),
     ("cookies", "Politica de cookie-uri", [

@@ -68,7 +68,8 @@ for k in list(D):
     if "darius@nextwise.studio" in k and k != "darius@nextwise.studio":
         D[k.replace("darius@nextwise.studio", "denis@nextwise.studio")] = D[k].replace("darius@nextwise.studio", "denis@nextwise.studio")
 D.update({"Datele firmei": "Company details", "Identificare": "Identification", "Contact": "Contact",
-          "Denumire: NEXTWISE AI STUDIO S.R.L.": "Name: NEXTWISE AI STUDIO S.R.L."})
+          "Denumire: NEXTWISE AI STUDIO S.R.L.": "Name: NEXTWISE AI STUDIO S.R.L.",
+          "EUID: ROONRC.J2023000662049": "EUID: ROONRC.J2023000662049"})
 D[TITLE["ro"]] = TITLE["en"]
 D[DESC["ro"]] = DESC["en"]
 D["Intră în site"] = "Enter the site"
