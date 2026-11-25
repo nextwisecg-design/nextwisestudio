@@ -71,7 +71,7 @@ PORTFOLIO = [
     dict(
         slug="cosmina-petrescu", hue=330, name="Cosmina Petrescu", kind="Site de prezentare",
         who="Salon de manichiură și pedichiură", since="noiembrie 2026",
-        badge="Live", live=True, url="https://cosminapetrescu.netlify.app", domain="cosminapetrescu.netlify.app", bar="cosminapetrescu.netlify.app",
+        badge="Live", live=True, url="https://cosminapetrescu.ro", domain="cosminapetrescu.ro", bar="cosminapetrescu.ro",
         summary="Site de prezentare pe o singură pagină, gata de arătat clientelor. Exact tipul de site pe care îl facem pentru firme mici.",
         delivered=["Site pe o pagină, cu serviciile salonului", "Arată bine pe telefon", "Găzduire inclusă"],
         stack=["HTML", "Netlify"],

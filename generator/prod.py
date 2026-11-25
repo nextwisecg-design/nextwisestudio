@@ -128,6 +128,7 @@ D.update({
     "Schema sistemului Flaviu Mihăiță": "System diagram for Flaviu Mihăiță",
     "Deschide mariusmacovei.ro": "Open mariusmacovei.ro",
     "Deschide psihflavium.ro": "Open psihflavium.ro",
+    "Deschide cosminapetrescu.ro": "Open cosminapetrescu.ro",
 })
 # texte adăugate după check-ul din 24.11.2026
 D.update({
@@ -154,7 +155,7 @@ D.update({
         "Messages that do not lead to a contract are kept for 12 months at most. Data about companies we contact ourselves is kept for 12 months at most from the last contact, or until you ask us to delete it. Data from contracts and invoices is kept for the period required by financial and accounting law.",
 })
 SAME = {"EN", "RO", "English", "Română", "website", "NEXTWISE", "agent", "%%OTHERLABEL%%", "%%OTHERNAME%%", "%%CANON%%", "#090A11", "%%OGLOCALE%%", "summary_large_image", "1200", "630", SITE + "/%%OGIMG%%"}
-SAME |= {"Flaviu Mihăiță", "Marius Macovei", "mariusmacovei.ro", "psihflavium.ro", "Vercel", "Next.js, Vercel"}
+SAME |= {"Flaviu Mihăiță", "Marius Macovei", "mariusmacovei.ro", "psihflavium.ro", "Vercel", "Next.js, Vercel", "cosminapetrescu.ro"}
 
 e = h
 a, b = e.index("<h1>"), e.index("</h1>") + 5
