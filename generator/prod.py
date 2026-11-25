@@ -136,7 +136,8 @@ if OUT.exists():
 (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
                                  f'<url><loc>{SITE}/</loc><xhtml:link rel="alternate" hreflang="ro" href="{SITE}/"/><xhtml:link rel="alternate" hreflang="en" href="{SITE}/en/"/></url>\n'
                                  f'<url><loc>{SITE}/en/</loc><xhtml:link rel="alternate" hreflang="ro" href="{SITE}/"/><xhtml:link rel="alternate" hreflang="en" href="{SITE}/en/"/></url>\n</urlset>\n')
-for f in ("favicon.svg", "favicon.ico", "apple-touch-icon.png", "og-ro.jpg", "og-en.jpg"):
+# google3331f9d828284b81.html: verificarea proprietății nextwise.studio în Google Search Console (25.11.2026); nu se șterge
+for f in ("favicon.svg", "favicon.ico", "apple-touch-icon.png", "og-ro.jpg", "og-en.jpg", "google3331f9d828284b81.html"):
     if (ROOT / "static" / f).exists():
         shutil.copy(ROOT / "static" / f, OUT / f)
     else:
